@@ -14,7 +14,9 @@ class User
     property :id, Serial
     property :email, String
     property :password, String
-    property :created_at, DateTime
+    property :skills, Text
+    property :pro, Boolean, :default => false
+    property :admin, Boolean, :default => false
 
     def login(password)
     	return self.password == password
@@ -27,4 +29,4 @@ DataMapper.finalize
 
 # automatically create the post table
 User.auto_upgrade!
-
+listing.auto_upgrade!

@@ -1,3 +1,15 @@
+=begin
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+do not touch this file!!!!!!!
+=end
+
 require 'data_mapper' # metagem, requires common plugins too.
 
 # need install dm-sqlite-adapter
@@ -27,4 +39,3 @@ DataMapper.finalize
 
 # automatically create the post table
 User.auto_upgrade!
-

@@ -41,4 +41,4 @@ DataMapper.finalize
 
 # automatically create the post table
 User.auto_upgrade!
-listing.auto_upgrade!
+Listing.auto_upgrade!

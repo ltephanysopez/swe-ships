@@ -1,6 +1,6 @@
 require "sinatra"
 require_relative "authentication.rb"
-
+require_relative "user.rb"
 
 #the following urls are included in authentication.rb
 # GET /login
@@ -20,3 +20,4 @@ get "/dashboard" do
 	authenticate!
 	erb :dashboard
 end
+

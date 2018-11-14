@@ -33,6 +33,7 @@ end
 
 
 post "/register" do
+	#FREE users
 	email = params[:email]
 	password = params[:password]
 

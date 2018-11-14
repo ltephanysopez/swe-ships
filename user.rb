@@ -11,6 +11,7 @@ do not touch this file!!!!!!!
 =end
 
 require 'data_mapper' # metagem, requires common plugins too.
+require_relative "listing.rb"
 
 # need install dm-sqlite-adapter
 # if on heroku, use Postgres database

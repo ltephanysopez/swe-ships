@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-require 'data_mapper' # metagem, requires common plugins too.
-=======
 require 'data_mapper'
 
 if ENV['DATABASE_URL']
@@ -8,7 +5,6 @@ if ENV['DATABASE_URL']
 else
   DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/app.db")
 end
->>>>>>> 7dbc349fa62867787d738822a42e113d1db58d67
 
 class Listing
     include DataMapper::Resource
@@ -44,7 +40,7 @@ post '/create' do
       j.company = params["company"]
       j.location = params["location"]
       j.save
-      return "Successfully added new video!"
+      return erb :upload_another
    else
       return "Error! You're missing a parameter."
    end

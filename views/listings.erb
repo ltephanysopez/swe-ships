@@ -1,12 +1,17 @@
+<div class="listings">
 <h2>Internships</h2>
+<br/>
+<br/>
 <% @lastings.each do |j| %>
+<img src="<%= j.logo %>" width="110" height="110">
 <h3><%= j.title %></h3>
-<p><%= j.logo %> </p>
-<p><%= j.description %> </p>
-<p><%= j.l_url %> </p>
-<p><%= j.location %> </p>
+<button type="button" class="btn btn-primary"><a href="<%= j.l_url %>">Apply Now</a></button>
 <p><%= j.company %> </p>
+<p><%= j.location %> </p>
+<p><%= j.description %> </p>
+<br/>
 <% end %>
 <br/>
 <br/>
 <br/>
+</div>

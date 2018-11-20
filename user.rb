@@ -1,5 +1,4 @@
 require 'data_mapper' # metagem, requires common plugins too.
-<<<<<<< HEAD
 require_relative 'listing.rb'
 require 'stripe'
 
@@ -8,10 +7,6 @@ set :secret_key, "sk_test_aTWBdKlOMVvvoJtaz7xjfFIg"
 
 Stripe.api_key = settings.secret_key
 
-
-=======
-require_relative "listing.rb"
->>>>>>> 7dbc349fa62867787d738822a42e113d1db58d67
 
 if ENV['DATABASE_URL']
   DataMapper::setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')

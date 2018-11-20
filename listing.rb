@@ -7,7 +7,6 @@ else
   DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/app.db")
 end
 
-
 class Listing
     include DataMapper::Resource
     property :id, Serial
@@ -42,7 +41,7 @@ post '/create' do
       j.company = params["company"]
       j.location = params["location"]
       j.save
-      return "Successfully added new video!"
+      return erb :upload_another
    else
       return "Error! You're missing a parameter."
    end

@@ -49,7 +49,7 @@ post "/register" do
 end
 
 #This method will return the user object of the currently signed in user
-#Returns nil if not signed in
+#Returns nil if not signed in 
 def current_user
 	if(session[:user_id])
 		@u ||= User.first(id: session[:user_id])

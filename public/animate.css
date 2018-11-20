@@ -8,7 +8,7 @@
  * Copyright (c) 2018 Daniel Eden
  */
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes bounce { 
   from,
   20%,
   53%,

@@ -2,8 +2,150 @@ a {
    color:white;
 }
 
+.navbar {
+  background-color: #03163d;
+  font-family:'Nunito', sans-serif;
+}
+.navbar .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #60aed8;
+}
+.navbar .navbar-text {
+  color: #ecf0f1;
+}
+.navbar .navbar-text a {
+  color: #60aed8;
+}
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+  color: #60aed8;
+}
+.navbar .navbar-nav .nav-link {
+  color: #ecf0f1;
+  border-radius: .25rem;
+  margin: 0 0.25em;
+}
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+  color: #60aed8;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+  color: #60aed8;
+  background-color: #03163d;
+}
+.navbar .navbar-toggle {
+  border-color: #03163d;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #03163d;
+}
+.navbar .navbar-toggle .navbar-toggler-icon {
+  color: #ecf0f1;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar .navbar-link {
+  color: #ecf0f1;
+}
+.navbar .navbar-link:hover {
+  color: #60aed8;
+}
+
+@media (max-width: 575px) {
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #60aed8;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #60aed8;
+    background-color: #03163d;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #60aed8;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #60aed8;
+    background-color: #03163d;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #60aed8;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #60aed8;
+    background-color: #03163d;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #60aed8;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #60aed8;
+    background-color: #03163d;
+  }
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item {
+  color: #ecf0f1;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+  color: #60aed8;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
+  color: #60aed8;
+  background-color: #03163d;
+}
+
+.jumbotron {
+   background-color:#03163d;
+   color:white;
+   font-family: 'Nunito', sans-serif;
+}
+
+/* INDEX PAGE */
+.btn-lg {
+   padding:10px 45px 13px 45px;
+   border-radius: 25px;
+}
+
+/* INTERNSHIPS PAGE */
 .listings {
-   margin:50px 100px 50px 200px;
+   margin:100px 100px 50px 200px;
+   font-family: 'Nunito', sans-serif;
 }
 
 /* JOB TITLE */
@@ -19,4 +161,40 @@ a {
 
 .listings button {
    float:right;
+}
+
+.container {
+   font-family: 'Nunito', sans-serif;
+}
+
+/* FOOTER SECTION */
+
+.end {
+   padding:75px 100px 0px 100px;
+   background:#081730;
+   color: #35517f;
+   font-family: 'Nunito', sans-serif;
+}
+
+.footer-grid {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 125px;
+}
+
+.footer-one {
+   grid-column-start:1;
+   grid-column-end:2;
+}
+
+.footer-two {
+   grid-column-start:2;
+   grid-column-end:5;
+   text-align: center;
+}
+
+.footer-three {
+   grid-column-start:5;
+   grid-column-end:6;
+   text-align: right;
 }

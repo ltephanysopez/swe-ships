@@ -12,7 +12,6 @@ require_relative "listing.rb"
 # if the user is signed in, current_user will refer to the signed in user object.
 # if they are not signed in, current_user will be nil
 
-
 get "/" do
 	erb :index
 end
@@ -22,8 +21,6 @@ get "/dashboard" do
 	authenticate!
 	erb :dashboard
 end
-
-
 
 #H O M E P A G E functions
 #function to embed video:
@@ -35,5 +32,5 @@ def youtube_embed(youtube_url)
     youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
     youtube_id = $5
   end
-	%Q{<iframe title="YouTube video player" width="1080" height="580" src="https://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+	%Q{<iframe title="YouTube video player" width="680" height="380" src="https://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
 end

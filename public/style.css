@@ -200,3 +200,25 @@ a {
    grid-column-end:6;
    text-align: right;
 }
+
+
+/*HOME PAGE*/
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

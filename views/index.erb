@@ -1,31 +1,42 @@
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-     <br/>
-     <br/>
-     <br/>
-   <h1>
-      We connect software engineering <br/>
-      students with internships <br/>
-      relevant to their skills.
-   </h1>
-   <br/>
-    <p><a class="btn btn-primary btn-lg" href="/sign_up" role="button">Sign Up</a></p>
-    <br/>
-    <br/>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
 
-<div class="container">
-  <!-- Example row of columns -->
-  <div align="center">
-    <div>
-      <h2>Play video to learn more about us</h2>
-      <p>
-        <%= youtube_embed ("watch?v=kWGs4wKgzMU") %>
-        </p>
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu';
+  grid-gap: 40px;
+  background-color: #355C7D;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #355C7D;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="grid-container">
+      <div class="item1"> <p></br></br>
+        We connect software engineering <br/>
+        students with internships <br/>
+        relevant to their skills.</p>
+        <p><a class="btn btn-primary btn-lg" href="/sign_up" role="button">Sign Up</a></p>
+      </div>
+    
+    <div class="item2">
+      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
     </div>
   </div>
-
-  <hr>
-</div> <!-- /container -->
+</div>

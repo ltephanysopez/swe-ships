@@ -144,10 +144,10 @@ a {
 
 /* INTERNSHIPS PAGE */
 .listings {
-   margin:100px 100px 50px 200px;
+   margin:100px 100px 50px 100px;
    font-family: 'Nunito', sans-serif;
 }
- 
+
 /* JOB TITLE */
 .listings h3 {
    color:blue;
@@ -164,6 +164,19 @@ a {
 }
 
 .container {
+   font-family: 'Nunito', sans-serif;
+}
+
+
+/* UPLOAD A NEW INTERNSHIP PAGE */
+.upload-listing {
+   margin:100px 100px 50px 100px;
+   font-family: 'Nunito', sans-serif;
+}
+
+/* UPGRADE PAGE */
+.upgrade-page {
+   margin:100px 100px 50px 100px;
    font-family: 'Nunito', sans-serif;
 }
 

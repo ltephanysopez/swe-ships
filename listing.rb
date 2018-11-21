@@ -26,6 +26,7 @@ end
 
 get '/listings/new' do
    authenticate!
+   administrator!
    erb :new_listing
 end
 
@@ -42,6 +43,6 @@ post '/create' do
       j.save
       return erb :upload_another
    else
-      return "Error! You're missing a parameter."
+      return "Error! You're missing a parameter. "
    end
 end

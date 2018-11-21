@@ -22,6 +22,8 @@ class User
     property :email, String
     property :password, String
     property :skills, Text
+    property :name, Text
+    property :preferred_location, Text
     property :pro, Boolean, :default => false
     property :administrator, Boolean, :default => false
 
@@ -35,6 +37,15 @@ DataMapper.finalize
 # automatically create the post table
 User.auto_upgrade!
 Listing.auto_upgrade!
+
+#make an admin user if one doesn't exist!
+if User.all(administrator: true).count == 0
+	u = User.new
+	u.email = "admin@admin.com"
+	u.password = "admin"
+	u.administrator = true
+	u.save
+end
 
 post "/charge" do
     authenticate!
@@ -58,8 +69,6 @@ post "/charge" do
   )
 
   erb :charge
-
-  "Success!"
 end
 
 
@@ -70,4 +79,28 @@ get "/user/upgrade" do
     else
         redirect "/"
     end
+end
+
+
+get '/account/edit_profile' do
+   authenticate!
+   erb :edit_profile
+end
+
+# updates user account with name, skills, and preferred location
+post '/update_profile' do
+   if params["name"] && params["skills"]
+      current_user.name = params["name"]
+      current_user.skills = params["skills"]
+      current_user.preferred_location = params["preferred_location"]
+      current_user.save
+      erb :account_profile
+   else
+      return "Error! You're missing a parameter. "
+   end
+end
+
+# displays current profile 
+get '/profile' do
+   erb :account_profile
 end

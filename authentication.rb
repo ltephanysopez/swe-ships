@@ -49,7 +49,7 @@ post "/register" do
 end
 
 #This method will return the user object of the currently signed in user
-#Returns nil if not signed in 
+#Returns nil if not signed in
 def current_user
 	if(session[:user_id])
 		@u ||= User.first(id: session[:user_id])
@@ -64,4 +64,11 @@ def authenticate!
 	if !current_user
 		redirect "/login"
 	end
+end
+
+#if the user is not an administrator, nor are they signed in, will redirect to login page
+def administrator!
+  if !current_user.administrator
+	  redirect "/"
+  end
 end

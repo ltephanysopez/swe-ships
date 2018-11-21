@@ -67,7 +67,6 @@ post "/charge" do
     :currency    => 'usd',
     :customer    => customer.id
   )
-
   erb :charge
 end
 
@@ -84,6 +83,7 @@ end
 
 get '/account/edit_profile' do
    authenticate!
+   pro_only!
    erb :edit_profile
 end
 
@@ -100,7 +100,9 @@ post '/update_profile' do
    end
 end
 
-# displays current profile 
+# displays current profile
 get '/profile' do
+   authenticate!
+   pro_only!
    erb :account_profile
 end

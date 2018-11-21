@@ -72,3 +72,9 @@ def administrator!
 	  redirect "/"
   end
 end
+
+def pro_only!
+	if !current_user.pro
+ 	  redirect "/"
+   end
+ end

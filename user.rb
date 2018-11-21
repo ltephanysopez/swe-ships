@@ -103,6 +103,6 @@ end
 # displays current profile
 get '/profile' do
    authenticate!
-   pro_only!
+   pro_only! 
    erb :account_profile
 end

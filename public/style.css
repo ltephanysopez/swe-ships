@@ -201,8 +201,21 @@ a {
    text-align: right;
 }
 
+/* UPLOAD A NEW INTERNSHIP PAGE */
+.upload-listing {
+  margin:100px 100px 50px 100px;
+  font-family: 'Nunito', sans-serif;
+}
 
-/*HOME PAGE*/
+
+/* UPGRADE PAGE */
+.upgrade-page {
+  margin:100px 100px 50px 100px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* HOME PAGE */
+
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 
@@ -211,13 +224,14 @@ a {
   grid-template-areas:
     'header header header menu menu menu'
     'header header header menu menu menu'
+    'header header header menu menu menu'
     'header header header menu menu menu';
-  grid-gap: 10px;
-  background-color: #2196F3;
+  grid-gap: 40px;
+  background-color: #355C7D;
   padding: 10px;
 }
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #355C7D;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;

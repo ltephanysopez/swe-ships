@@ -1,8 +1,6 @@
 require "sinatra"
 require_relative "authentication.rb"
 require_relative "user.rb"
-
-
 require_relative "listing.rb"
 
 

@@ -65,3 +65,16 @@ def authenticate!
 		redirect "/login"
 	end
 end
+
+#if the user is not an administrator, nor are they signed in, will redirect to login page
+def administrator!
+  if !current_user.administrator
+	  redirect "/"
+  end
+end
+
+def pro_only!
+	if !current_user.pro
+ 	  redirect "/"
+   end
+ end

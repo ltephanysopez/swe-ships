@@ -1,0 +1,36 @@
+<div class="upload-listing">
+<br/>
+<br/>
+<br/>
+<h1>Edit Account Profile</h1>
+<br/>
+<br/>
+<form action="/update_profile" method="POST">
+   <div class="row" id="aisle">
+         <div class="col-6">
+            <label for="userName">Full name</label>
+            <input type="text" class="form-control" placeholder="Ex: Guido van Rossum" name="name">
+         </div>
+        <br/>
+        <div class="col-6">
+            <label for="listingDescription">Skills</label>
+            <input type="text" class="form-control" placeholder="Ex: Requirements include: knowledge of C++, Java, or Python" name="skills">
+        </div>
+        <br/>
+     </div>
+     <br/>
+     <div class="row" id="aisle">
+     <div class="col-6">
+         <label for="listingDescription">Preferred Location (optional)</label>
+         <input type="text" class="form-control" placeholder="Ex: Texas" name="preferred_location">
+    </div>
+    </div>
+    <br/>
+     <p>E-mail: <%= current_user.email %></p>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>

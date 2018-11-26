@@ -1,5 +1,5 @@
 require 'data_mapper' # metagem, requires common plugins too.
-<<<<<<< HEAD
+
 require_relative 'listing.rb'
 require 'stripe'
 
@@ -9,9 +9,7 @@ set :secret_key, "sk_test_aTWBdKlOMVvvoJtaz7xjfFIg"
 Stripe.api_key = settings.secret_key
 
 
-=======
-require_relative "listing.rb"
->>>>>>> 7dbc349fa62867787d738822a42e113d1db58d67
+
 
 if ENV['DATABASE_URL']
   DataMapper::setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
@@ -74,3 +72,51 @@ get "/user/upgrade" do
         redirect "/"
     end
 end 
+
+get '/account/edit_profile' do
+   authenticate!
+   pro_only!
+   erb :edit_profile
+end
+
+# updates user account with name, skills, and preferred location
+post '/update_profile' do
+   if params["nam"] && params["skills"]
+      current_user.nam = params["nam"]
+      current_user.skills = params["skills"]
+      current_user.preferred_location = params["preferred_location"]
+      current_user.save
+
+      # FOR MATCHING
+
+values =current_user.skills.split(",")
+      alljobs =Listing.all
+alljobs.each do |v|
+v.count =0
+internskill =v.description.split(",")
+
+internskill.each do |i|
+values.each do |c|
+  if (c.downcase==i.downcase)
+    add =v.count.to_i+ 1
+    v.count =add
+    v.save
+  end
+end
+end
+end
+      erb :account_profile
+   else
+      return "Error! You're missing a parameter. "
+   end
+end
+
+
+# displays current profile
+get '/profile' do
+   authenticate!
+   pro_only!
+   erb :account_profile
+end
+
+

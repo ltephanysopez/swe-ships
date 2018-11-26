@@ -12,6 +12,7 @@ class Listing
     property :title, Text
     property :logo, Text
     property :description, Text
+    property :skills, Text
     property :l_url, Text
     property :location, Text
     property :company, Text
@@ -32,12 +33,13 @@ end
 
 #adds a new listing to the database
 post '/create' do
-   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["company"] && params["location"]
+   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["skills"] && params["company"] && params["location"]
       j = Listing.new
       j.title = params["title"]
       j.description = params["description"]
       j.logo = params["logo"]
       j.l_url = params["l_url"]
+      j.skills = params["skills"]
       j.company = params["company"]
       j.location = params["location"]
       j.save

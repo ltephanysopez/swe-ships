@@ -7,7 +7,10 @@ a {
   font-family:'Nunito', sans-serif;
 }
 .navbar .navbar-brand {
-  color: #ecf0f1;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size:25px;
+
 }
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
@@ -158,9 +161,8 @@ a {
 /* COMPANY LOGO */
 .listings img {
    float:left;
-   margin:10px 20px 10px 10px;
+   margin:10px 30px 10px 10px;
 }
-
 .listings button {
    float:right;
 }
@@ -203,7 +205,10 @@ a {
 .footer-one {
    grid-column-start:1;
    grid-column-end:2;
+   font-family: 'Abril Fatface', cursive;
+   font-size:30px;
 }
+
 
 .footer-two {
    grid-column-start:2;

@@ -6,9 +6,13 @@ a {
   background-color: #355C7D;
   font-family:'Nunito', sans-serif;
 }
+
 .navbar .navbar-brand {
-  color: #ecf0f1;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size:25px;
 }
+
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   /*color: #60aed8;*/
@@ -145,6 +149,7 @@ a {
 }
 
 /* INTERNSHIPS PAGE */
+
 .listings {
    margin:100px 100px 50px 200px;
    font-family: 'Nunito', sans-serif;
@@ -203,6 +208,8 @@ a {
 .footer-one {
    grid-column-start:1;
    grid-column-end:2;
+   font-family: 'Abril Fatface', cursive;
+   font-size:30px;
 }
 
 .footer-two {
@@ -215,4 +222,27 @@ a {
    grid-column-start:5;
    grid-column-end:6;
    text-align: right;
+}
+
+/* HOME PAGE */
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu';
+  grid-gap: 40px;
+  background-color: #355C7D;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #355C7D;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }

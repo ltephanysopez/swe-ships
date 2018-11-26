@@ -6,15 +6,18 @@
    <br/>
    <br/>
    <% @lastings.each do |j| %>
-      <img src="<%= j.logo %>" width="110" height="110">
+      <img src="<%= j.logo %>" width="90" height="90">
       <h3><%= j.title %></h3>
-      <button type="button" class="btn btn-primary"><a href="<%= j.l_url %>">Apply Now</a></button>
-      <p><%= j.company %> </p>
-      <p><%= j.location %> </p>
-      <p><%= j.description %> </p>
+      <a href="<%= j.l_url %>"><button type="button" class="btn btn-primary">Apply</button></a>
+      <p><strong><%= j.company %> </strong><br/>
+      <%= j.location %> <br/>
+       Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/>
+      <br/>
+      <%= j.description %>
+   </p>
+   <br/>
    <br/>
    <% end %>
-   <br/>
    <br/>
    <br/>
    <br/>

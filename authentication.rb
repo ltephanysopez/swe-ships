@@ -1,7 +1,10 @@
 require 'sinatra'
+require 'sinatra/flash'
 require_relative "user.rb"
 
 enable :sessions
+
+
 
 get "/login" do
 	erb :"authentication/login"
@@ -28,6 +31,7 @@ get "/logout" do
 end
 
 get "/sign_up" do
+	flash[:error] = "Please input a valid email! "
 	erb :"authentication/sign_up"
 end
 
@@ -37,14 +41,21 @@ post "/register" do
 	email = params[:email]
 	password = params[:password]
 
-	u = User.new
-	u.email = email.downcase
-	u.password =  password
-	u.save
+	#check domain = "@utrgv.edu"
+	domain = "@utrgv.edu"
+	e_length = email.length
+	e_domain = email[(e_length-10),10]
 
-	session[:user_id] = u.id
-
-	erb :"authentication/successful_signup"
+	if(e_domain == domain)
+		u = User.new
+		u.email = email.downcase
+		u.password =  password
+		u.save
+		session[:user_id] = u.id
+		erb :"authentication/successful_signup"
+	else
+		erb :"authentication/invalid_signup"
+	end
 
 end
 

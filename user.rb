@@ -22,7 +22,7 @@ class User
     include DataMapper::Resource
     property :id, Serial
     property :email, String
-    property :nam, Text
+    property :full_name, Text
     property :password, String
     property :skills, Text
      property :preferred_location, Text
@@ -83,29 +83,30 @@ end
 
 # updates user account with name, skills, and preferred location
 post '/update_profile' do
-   if params["nam"] && params["skills"]
-      current_user.nam = params["nam"]
+   if params["full_name"] && params["skills"]
+      current_user.full_name = params["full_name"]
       current_user.skills = params["skills"]
       current_user.preferred_location = params["preferred_location"]
       current_user.save
 
       # FOR MATCHING
 
-values =current_user.skills.split(",")
-      alljobs =Listing.all
-alljobs.each do |v|
-v.count =0
-internskill =v.description.split(",")
+  values = current_user.skills.split(",")
+  alljobs =Listing.all
+     
+  alljobs.each do |v|
+  v.count =0
+  internskill = v.description.split(",")
 
-internskill.each do |i|
-values.each do |c|
-  if (c.downcase==i.downcase)
-    add =v.count.to_i+ 1
-    v.count =add
-    v.save
+  internskill.each do |i|
+    values.each do |c|
+       if (c.downcase == i.downcase)
+        add = v.count.to_i+ 1
+        v.count = add
+        v.save
+       end
+    end
   end
-end
-end
 end
       erb :account_profile
    else

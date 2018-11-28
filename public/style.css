@@ -2,18 +2,18 @@ a {
    color:white;
 }
 
+
 .navbar {
   background-color: #355C7D;
   font-family:'Nunito', sans-serif;
 }
+
 .navbar .navbar-brand {
-  color: #ecf0f1;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size:25px;
 }
-.navbar .navbar-brand:hover,
-.navbar .navbar-brand:focus {
-  /*color: #60aed8;*/
-  color: ;
-}
+
 .navbar .navbar-text {
   color: #ecf0f1;
 }
@@ -144,9 +144,8 @@ a {
    border-radius: 25px;
 }
 
-/* INTERNSHIPS PAGE */
 .listings {
-   margin:100px 100px 50px 200px;
+   margin: 100px 100px 50px 150px;
    font-family: 'Nunito', sans-serif;
 }
 
@@ -165,6 +164,22 @@ a {
    float:right;
 }
 
+.listings h3 {
+   color:#F8B195;
+}
+
+/* UPLOAD A NEW INTERNSHIP PAGE */
+.upload-listing {
+   margin:100px 100px 50px 100px;
+   font-family: 'Nunito', sans-serif;
+}
+
+/* UPGRADE PAGE */
+.upgrade-page {
+   margin:100px 100px 50px 100px;
+   font-family: 'Nunito', sans-serif;
+}
+
 .container {
    font-family: 'Nunito', sans-serif;
 }
@@ -173,8 +188,8 @@ a {
 
 .end {
    padding:75px 100px 0px 100px;
-   background:#081730;
-   color: #35517f;
+   background:#355C7D;
+   color: white;
    font-family: 'Nunito', sans-serif;
 }
 
@@ -187,12 +202,20 @@ a {
 .footer-one {
    grid-column-start:1;
    grid-column-end:2;
+   font-family: 'Abril Fatface', cursive;
+   font-size:30px;
 }
 
 .footer-two {
    grid-column-start:2;
    grid-column-end:5;
    text-align: center;
+   color:white;
+}
+
+.footer-two a:hover{
+   color:#F8B195;
+   text-decoration: none;
 }
 
 .footer-three {
@@ -201,23 +224,16 @@ a {
    text-align: right;
 }
 
-/* UPLOAD A NEW INTERNSHIP PAGE */
-.upload-listing {
-  margin:100px 100px 50px 100px;
-  font-family: 'Nunito', sans-serif;
-}
-
-
-/* UPGRADE PAGE */
-.upgrade-page {
-  margin:100px 100px 50px 100px;
-  font-family: 'Nunito', sans-serif;
-}
 
 /* HOME PAGE */
+.item1 {
+   grid-area: header;
+}
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
+.item2 {
+   grid-area: menu;
+   align-items: center;
+}
 
 .grid-container {
   display: grid;
@@ -226,13 +242,74 @@ a {
     'header header header menu menu menu'
     'header header header menu menu menu'
     'header header header menu menu menu';
-  grid-gap: 40px;
+  grid-gap: 10px;
   background-color: #355C7D;
   padding: 10px;
 }
 .grid-container > div {
   background-color: #355C7D;
-  text-align: center;
-  padding: 20px 0;
+  padding:70px 50px 0px 20px;
   font-size: 30px;
 }
+
+.about-app {
+  background-color: white;
+  margin: 100px 60px 100px 60px;
+  font-family: 'Nunito', sans-serif;
+  color:#355C7D;
+}
+
+.about-app > h2{
+ text-align: center;
+}
+
+
+/* Shrink */
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+/* TERMS OF USE PAGE */
+
+.legal {
+   font-family: 'Work Sans', sans-serif;
+   margin: 100px 200px 100px 200px;
+}
+
+.legal h1, h3, h4 {
+   font-weight:700;
+}
+
+
+/* ACCOUNT PROFILE PAGE */
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+

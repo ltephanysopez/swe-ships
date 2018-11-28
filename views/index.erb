@@ -1,14 +1,53 @@
 <div class="jumbotron">
   <div class="grid-container">
-      <div class="item1"> <p></br></br>
-        We connect software engineering <br/>
-        students with internships <br/>
-        relevant to their skills.</p>
-        <p><a class="btn btn-primary btn-lg" href="/sign_up" role="button">Sign Up</a></p>
+     <% if current_user %>
+      <div class="item1">
+         <p>
+           Welcome back <br/>
+         </p>
       </div>
-    
     <div class="item2">
       <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
     </div>
+    <% else %>
+    <div class="item1">
+      <br/>
+      <p>
+         We connect software engineering <br/>
+         students with internships <br/>
+         relevant to their skills.
+      </p>
+     <p><a class="btn btn-primary btn-lg hvr-shrink" href="/sign_up" role="button">Sign Up</a></p>
+    </div>
+    <div class="item2">
+      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
+    </div>
+   <% end %>
   </div>
 </div>
+
+  
+<div class="about-app">
+  <h2>HOW DOES IT WORK?</h2>
+  <h5 align="center"><u>Still got questions? don't worry!
+  the website's functionalities are described in detail below:</u></h5>
+ 
+  <h5>FREE USERS</h5>
+  <p>Sing up with your <b>UTRGV</b> email to become a free user! as such, you will be able to see
+  up to ten great opportunities currently open under <b>"Internships"</b>. </br>
+ 
+  <h5>PREMIUM USERS</h5>
+  For a better experience, <b>upgrade</b> to become a PREMIUM user by paying a one-time fee of 5 USD. </br>
+  PREMIUM users can create a personal profile and:
+
+  <ul>
+    <li>Input their name</li>
+    <li>Add their skills and abilities (e.g. C++, HTML, Ruby)</li>
+    <li>Specify their preferred location to work on (state)</li>
+  </ul>
+  <p>You can always come back and edit your profile if you need to make any changes.</br></br>
+    As a PREMIUM user, internship opportunities will be "matched" to you: only those requiring
+    your skills and abilities, as well as your preferred location, will be displayed. </br>
+    From there, you can just click on <b>Apply</b> and will be automatically taken directly to the website.
+  </p>
+</div>  

@@ -16,40 +16,41 @@ class Listing
     property :l_url, Text
     property :location, Text
     property :company, Text
+    property :count, Integer
 
 end
 
 get '/listings' do
    authenticate!
   if (current_user.pro == false)
- @lasting = Listing.all(:count.gt => 0, :count.lt => 11)
+ @lasting = Listing.all(:id.gt => 0, :id.lt => 5)
    
    
 
    erb :listings
  else
 
-if params["preferred_location"]
+#if params["preferred_location"]
 
-@lasting = Listing.all(:count.gt => 3,:location => current_user.preferred_location)
-@lasting = Listing.all(:count => 3,:location => current_user.preferred_location)
+#@lasting = Listing.all(:count.gt => 3,:location => current_user.preferred_location)
+#@lasting = Listing.all(:count => 3,:location => current_user.preferred_location)
 
-@lasting = Listing.all(:count => 2,:location => current_user.preferred_location)
-erb :listings
-else
+#@lasting = Listing.all(:count => 2,:location => current_user.preferred_location)
+#erb :listings
+#else
 
-  @lasting = Listing.all(:count.gt => 3)
+  #@lasting = Listing.all(:count.gt => 3)
  @lasting = Listing.all(:count =>3) 
 @lasting = Listing.all(:count =>2) 
 
-erb :listings
-end
+#erb :listings
+#end
 end
 end
 
 get '/listings/new' do
    authenticate!
-   administrator!
+   #administrator!
    erb :new_listing
 end
 
@@ -65,8 +66,9 @@ post '/create' do
       j.company = params["company"]
       j.location = params["location"]
       j.save
-      return erb :upload_another
+      return erb :new_listing
    else
       return "Error! You're missing a parameter. "
    end
 end
+

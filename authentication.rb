@@ -31,7 +31,7 @@ get "/logout" do
 end
 
 get "/sign_up" do
-	flash[:error] = "Please input a valid email!"
+	flash[:error] = "ERROR: Please input a valid email."
 	erb :"authentication/sign_up"
 end
 

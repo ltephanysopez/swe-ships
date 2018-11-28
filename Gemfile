@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'data_mapper'
 gem 'stripe'
+gem 'sinatra-flash'
 
 group :development do
   gem "sqlite3-ruby"

@@ -5,14 +5,14 @@
 <br/>
 
 <div class="container">
-<h2>Register </h2>
+<h2>Register</h2>
 <br/>
 
 <form action="register" method="POST">
   <div class="col-4">
-    <label for="email">Email address </label>
+    <label for="email">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name ="email">
-	  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <br/>
   <div class="col-4">
@@ -22,7 +22,17 @@
   <br/>
 &nbsp;&nbsp; <button type="submit" class="btn btn-primary">Register</button>
 </form>
+</br>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= flash[:error] %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
 </div>
+<br/>
 <br/>
 <br/>
 <br/>

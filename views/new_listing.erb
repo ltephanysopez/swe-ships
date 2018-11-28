@@ -1,0 +1,59 @@
+<div class="upload-listing">
+<br/>
+<br/>
+<br/>
+<h1>Upload an Internship</h1>
+<br/>
+<br/>
+<form action="/create" method="POST">
+   <div class="row" id="aisle">
+         <div class="col-6">
+            <label for="listingTitle">Job Title</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Ex: Software Engineering Intern" name="title">
+         </div>
+        <br/>
+        <div class="col-6">
+            <label for="listingDescription">Job Description</label>
+            <input type="text" class="form-control" placeholder="Ex: Company values and expectations for the role" name="description">
+        </div>
+        <br/>
+     </div>
+  <br/>
+    <div class="row" id="aisle">
+       <div class="col-6">
+           <label for="listingUrl">Company</label>
+           <input type="text" class="form-control" placeholder="Ex: Github" name="company">
+       </div>
+       <br/>
+       <div class="col-6">
+           <label for="listingLocation">Location</label>
+           <input type="text" class="form-control" placeholder="Ex: New York, NY" name="location">
+       </div>
+       <br/>
+    </div>
+    <br/>
+    <div class="row" id="aisle">
+      <div class="col-6">
+           <label for="listingUrl">Required Skills</label>
+           <input type="text" class="form-control" placeholder="Ex: C++, Python, Java, HTML, CSS" name="skills">
+      </div>
+            <br/>
+            <div class="col-6">
+                <label for="listingUrl">Job Posting Link</label>
+                <input type="text" class="form-control" placeholder="Enter link to job posting" name="l_url">
+            </div>
+            <br/>
+     </div>
+     <br/>
+      <div class="row" id="aisle">
+     <div class="col-6">
+          <label for="listingLogo">Company Logo</label>
+          <input type="text" class="form-control" placeholder="Enter company logo" name="logo">
+     </div>
+     </div>
+     <br/>
+    <br/>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<br/>

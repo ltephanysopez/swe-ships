@@ -104,7 +104,7 @@ end
 get '/profile' do
    authenticate!
    pro_only!
-   erb :"profile/account_profile"
+   erb :account_profile
 end
 
 def matching

@@ -300,3 +300,17 @@ a {
   background-color: #2098D1;
   color: white;
 }
+
+/* SIGN-UP PAGE */
+.terms-link {
+   color:gray;
+}
+
+.terms-link a {
+   color:gray;
+}
+
+.terms-link a:hover {
+   color:black;
+   text-decoration: none;
+}

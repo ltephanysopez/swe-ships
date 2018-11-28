@@ -252,6 +252,19 @@ a {
   font-size: 30px;
 }
 
+.about-app {
+  background-color: white;
+  margin: 100px 60px 100px 60px;
+  font-family: 'Nunito', sans-serif;
+  color:#355C7D;
+}
+
+.about-app > h2{
+ text-align: center;
+}
+
+
+
 /* Shrink */
 .hvr-shrink {
   display: inline-block;
@@ -300,3 +313,4 @@ a {
   background-color: #2098D1;
   color: white;
 }
+

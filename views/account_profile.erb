@@ -5,19 +5,15 @@
 <h1>Account Profile</h1>
 <br/>
 <br/>
-<div class="alert alert-success" role="alert">
-  Successly updated profile.
-</div>
 <p>Email: <%= current_user.email %> </p>
 <br/>
-<p>Full name: <%= current_user.name %></p>
+<p>Full name: <%= current_user.full_name %></p>
 <br/>
 <p>Skills:  <%= current_user.skills %></p>
 <br/>
 <p>Preferred location: <%= current_user.preferred_location %></p>
 <br/>
-<br/>
-<br/>
+<p><a class="btn btn-light hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
 <br/>
 <br/>
 <br/>

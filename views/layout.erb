@@ -3,7 +3,7 @@
 <head>
 	<title>swe-ships</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito|Abril+Fatface" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Niramit|Nunito|Abril+Fatface|Work+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<link rel="stylesheet" type="text/css" href="/animate.css">
 	<base href="/">
@@ -13,6 +13,13 @@
 	<%= erb :navigation %>
 
 	<main role="main">
+
+		<% flash.keys.each do |type| %>
+		<div data-alert class="flash <%= type%> alert-box radius">
+			<%= flash[type]%>
+			<a href="#" class="close">&times;</a>
+		</div>
+		<% end %>
 
 		<%= yield %>
 
@@ -25,8 +32,8 @@
       	<p>swe-ships<p>
       </div>
 		<div class="footer-two">
-			<p>&copy; Copyright Ignite 2018. All rights reserved.</p>
-			<p>Terms of use • Press Inquiries • General Inquiries • Investors </p>
+			<p>&copy; Copyright swe-ships 2018. All rights reserved.</p>
+			<p><a href="/terms-of-use">Terms of Use </a>• <a href="/privacy-policy">Privacy Policy</a> • <a href="#">General Inquiries</a> • <a href="#">Investors</a> </p>
 		</div>
 		<div class="footer-three">
 		<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width=40 height=40>

@@ -22,7 +22,7 @@ class User
     property :email, String
     property :password, String
     property :skills, Text
-    property :name, Text
+    property :full_name, Text
     property :preferred_location, Text
     property :pro, Boolean, :default => false
     property :administrator, Boolean, :default => false
@@ -89,8 +89,8 @@ end
 
 # updates user account with name, skills, and preferred location
 post '/update_profile' do
-   if params["name"] && params["skills"]
-      current_user.name = params["name"]
+   if params["full_name"] && params["skills"]
+      current_user.full_name = params["full_name"]
       current_user.skills = params["skills"]
       current_user.preferred_location = params["preferred_location"]
       current_user.save
@@ -103,6 +103,26 @@ end
 # displays current profile
 get '/profile' do
    authenticate!
-   pro_only! 
-   erb :account_profile
+   pro_only!
+   erb :"profile/account_profile"
+end
+
+def matching
+  values = current_user.skills.split(",")
+  alljobs = Listing.all
+
+     alljobs.each do |v|
+     v.count = 0
+     internskill = v.description.split(",")
+
+           internskill.each do |i|
+              values.each do |c|
+                 if (c.downcase == i.downcase)
+                 add = v.count.to_i+ 1
+                 v.count = add
+                 end
+                 v.save
+              end
+           end
+     end
 end

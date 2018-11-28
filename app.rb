@@ -1,4 +1,5 @@
 require "sinatra"
+require 'sinatra/flash'
 require_relative "authentication.rb"
 require_relative "user.rb"
 require_relative "listing.rb"
@@ -17,15 +18,15 @@ get "/" do
 	erb :index
 end
 
-
-get "/dashboard" do
-	authenticate!
-	erb :dashboard
+get "/terms-of-use" do
+	erb :terms
 end
 
+get "/privacy-policy" do
+	erb :privacy
+end
 
-#H O M E P A G E functions
-#function to embed video:
+#Function to embed video:
 def youtube_embed(youtube_url)
   if youtube_url[/youtu\.be\/([^\?]*)/]
     youtube_id = $1

@@ -313,3 +313,19 @@ a {
   color: white;
 }
 
+<<<<<<< HEAD
+=======
+/* SIGN-UP PAGE */
+.terms-link {
+   color:gray;
+}
+
+.terms-link a {
+   color:gray;
+}
+
+.terms-link a:hover {
+   color:black;
+   text-decoration: none;
+}
+>>>>>>> 9441c9dedb5b0c496f3db03f2b823fe73e41788a

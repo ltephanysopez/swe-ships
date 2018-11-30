@@ -43,7 +43,7 @@ post '/create' do
       j.company = params["company"]
       j.location = params["location"]
       j.save
-      return erb :"listings/upload_another"
+      return erb :upload_another
    else
       return "Error! You're missing a parameter. "
    end

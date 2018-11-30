@@ -33,7 +33,7 @@ end
 
 #adds a new listing to the database
 post '/create' do
-   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["skills"] && params["company"] && params["location"]
+   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["skills"] && params["company"] && params["location"] != nil
       j = Listing.new
       j.title = params["title"]
       j.description = params["description"]

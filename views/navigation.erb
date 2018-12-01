@@ -59,17 +59,17 @@
        <form action="register" method="POST">
            <div class="col-md-11">
          <label for="full_name">Full name</label>
-         <input type="full_name" class="form-control" id="exampleInputEmail1" placeholder="Ada Lovelace" name ="full_name">
+         <input type="full_name" class="form-control" placeholder="Ada Lovelace" name ="full_name" required>
         </div>
         <br/>
          <div class="col-md-11">
            <label for="email">Email address </label>
-           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@gmail.com" name ="email">
+           <input type="email" class="form-control" placeholder="name@gmail.com" name ="email" required>
          </div>
          <br/>
          <div class="col-md-11">
            <label for="password">Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create a password" name="password">
+           <input type="password" class="form-control" placeholder="Create a password" name="password" required>
          </div>
          <br/>
        <p class="terms-link"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By signing up, you're agreeing to our <a href="/terms-of-use">Terms of Use.</a></p>
@@ -97,12 +97,12 @@
        <form action="/process_login" method="POST">
          <div class="col-md-11">
            <label for="email">E-mail address</label>
-           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="user@gmail.com" name ="email">
+           <input type="email" class="form-control" placeholder="user@gmail.com" name ="email" required>
           <br/>
          </div>
          <div class="col-md-11">
            <label for="password">Password</label>
-           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+           <input type="password" class="form-control" placeholder="Password" name="password" required>
          </div>
          <br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Submit</button>

@@ -35,5 +35,5 @@ def youtube_embed(youtube_url)
     youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
     youtube_id = $5
   end
-	%Q{<iframe title="YouTube video player" width="680" height="380" src="https://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
+	%Q{<iframe title="YouTube video player" width="580" height="380" src="https://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
 end

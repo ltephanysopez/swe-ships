@@ -6,12 +6,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Niramit|Nunito:100,300|Abril+Fatface|Work+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<link rel="stylesheet" type="text/css" href="/animate.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript">
-		$(window).on('load',function(){
-			$('.loader').addClass('complete')
-		})
-	</script>
 	<base href="/">
 </head>
 <body>
@@ -19,25 +13,6 @@
 	<%= erb :navigation %>
 
 	<main role="main">
-
-		<div class="loader">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-
 
 		<%= yield %>
 

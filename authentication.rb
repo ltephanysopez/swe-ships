@@ -38,6 +38,7 @@ end
 
 post "/register" do
 	#FREE users
+	full_name = params[:full_name]
 	email = params[:email]
 	password = params[:password]
 
@@ -49,6 +50,7 @@ post "/register" do
 	if(e_domain == domain)
 		u = User.new
 		u.email = email.downcase
+		u.full_name = full_name
 		u.password =  password
 		u.save
 		session[:user_id] = u.id

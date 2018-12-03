@@ -326,11 +326,10 @@ a {
 }
 
 /* MODAL BODY */
-.modal-content {
-   color:#444444;
-   font-family: 'Nunito', sans-serif;
-   font-weight:100;
-   font-size:1em;
+.modal-header {
+   background-image: url("https://images.pexels.com/photos/1054289/pexels-photo-1054289.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   background-position: center;
+   color:white;
 }
 
 .modal-content a {
@@ -345,6 +344,18 @@ a {
 .modal-title {
    font-weight:200;
    font-size: 2.5em;
+}
+
+.col-md-5 {
+   padding-left: 47px;
+   font-family: 'Lato', sans-serif;
+   font-weight: 700;
+}
+
+.col-md-11 {
+   padding-left: 30px;
+   font-family: 'Lato', sans-serif;
+   font-weight: 700;
 }
 
 .col-md-11 {

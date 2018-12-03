@@ -1,4 +1,4 @@
-require 'data_mapper' # metagem, requires common plugins too.
+require 'data_mapper' 
 require_relative 'listing.rb'
 require 'stripe'
 

@@ -2,9 +2,19 @@
    <br/>
    <br/>
    <h1>Internships</h1>
+
+   <!-- Display different messages for pro and free users -->
+   <% if (current_user.pro == true || current_user.administrator == true ) %>
    <p>The following internships are based on the skills on your profile: <span class="badge badge-light"><%= current_user.skills%></span></p>
+   <% else %>
+   <p>Upgrade to PREMIUM to get internships based on your skills: <span class="badge badge-light"><%= current_user.skills%></span></p>
+   <% end %>
+   <!--****************************************************************-->
    <br/>
    <br/>
+
+   <% i = 0 %>  <!-- variable for looping through internships 10 times (FREE USERS) -->
+
    <% @lastings.each do |j| %>
       <img src="<%= j.logo %>" width="90" height="90">
       <h3><%= j.title %></h3>
@@ -15,9 +25,13 @@
       <br/>
       <%= j.description %>
    </p>
+
+   <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
+   <% i += 1 %>
+   <% break if i == 1 unless (current_user.pro ==true || current_user.administrator == true) %>
+<% end %>
    <br/>
    <br/>
-   <% end %>
    <br/>
    <br/>
    <br/>

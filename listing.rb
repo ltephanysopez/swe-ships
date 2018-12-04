@@ -19,9 +19,11 @@ class Listing
 
 end
 
+
 get '/listings' do
    authenticate!
    @lastings = Listing.all
+   
    erb :listings
 end
 

@@ -89,8 +89,8 @@ end
 
 # updates user account with name, skills, and preferred location
 post '/update_profile' do
-   if params["fullname"] && params["skills"]
-      current_user.full_name = params["fullname"]
+   if params["full_name"] && params["skills"]
+      current_user.full_name = params["full_name"]
       current_user.skills = params["skills"]
       current_user.preferred_location = params["preferred_location"]
       current_user.save
@@ -101,12 +101,12 @@ post '/update_profile' do
       alljobs = Listing.all
       alljobs.each do |v|
         v.count = 0
-        internskill =v.description.split(',')
+        internskill = v.skills.split(',')
 
         internskill.each do |i|
           values.each do |c|
-            if (c.downcase==i.downcase)
-              add=v.count.to_i+ 1
+            if (c.downcase == i.downcase)
+              add = v.count.to_i+ 1
               v.count =add
             end
             v.save

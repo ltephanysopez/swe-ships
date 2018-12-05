@@ -16,6 +16,7 @@ class Listing
     property :l_url, Text
     property :location, Text
     property :company, Text
+    property :count, Integer 
 
 end
 
@@ -23,10 +24,10 @@ end
 get '/listings' do
    authenticate!
    if (current_user.pro == false)
-    @lasting = Listing.all(:id.gt => 0, :id.lt => 11)
+    @lastings = Listing.all(:id.gt => 0, :id.lt => 11)
     erb :listings
   else
-    @lasting = Listing.all(:count.gt=> 1)
+    @lastings = Listing.all(:count.gt=> 1)
     erb :listings
   end
 end
@@ -35,7 +36,7 @@ end
 get 'listings/preferred-location' do 
   pro_only!
   if (current_user.preferred_location != nil)
-    @lasting = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
+    @lastings = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
     erb :listings
   else
   return "You do not have any preferred locations!" 

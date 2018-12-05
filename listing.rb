@@ -31,6 +31,7 @@ get '/listings' do
   end
 end
 
+# Tarana was here
 get 'listings/preferred-location' do 
   pro_only!
   if (current_user.preferred_location != nil)

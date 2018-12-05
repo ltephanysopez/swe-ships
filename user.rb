@@ -96,6 +96,7 @@ post '/update_profile' do
       current_user.save
 
       # matching algorithm
+      # Tarana was here
       values = current_user.skills.split(',')
       alljobs = Listing.all
       alljobs.each do |v|

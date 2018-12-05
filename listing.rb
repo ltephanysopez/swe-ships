@@ -33,7 +33,7 @@ get '/listings' do
 end
 
 # Tarana was here
-get 'listings/preferred-location' do 
+get '/listings/preferred-location' do 
   pro_only!
   if (current_user.preferred_location != nil)
     @lastings = Listing.all(:count.gt => 1,:location => current_user.preferred_location)

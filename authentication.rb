@@ -19,7 +19,7 @@ post "/process_login" do
 
 	if(user && user.login(password))
 		session[:user_id] = user.id
-		redirect "/"
+		redirect "/listings"
 	else
 		erb :"authentication/invalid_login"
 	end

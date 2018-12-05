@@ -89,40 +89,39 @@ end
 
 # updates user account with name, skills, and preferred location
 post '/update_profile' do
-   if params["full_name"] && params["skills"]
-      current_user.full_name = params["full_name"]
+   if params["fullname"] && params["skills"]
+      current_user.full_name = params["fullname"]
       current_user.skills = params["skills"]
       current_user.preferred_location = params["preferred_location"]
       current_user.save
+
+      # matching algorithm
+      values = current_user.skills.split(',')
+      alljobs = Listing.all
+      alljobs.each do |v|
+        v.count = 0
+        internskill =v.description.split(',')
+
+        internskill.each do |i|
+          values.each do |c|
+            if (c.downcase==i.downcase)
+              add=v.count.to_i+ 1
+              v.count =add
+            end
+            v.save
+          end
+        end
+      end
       erb :account_profile
-   else
-      return "Error! You're missing a parameter. "
-   end
+  else
+    return "Error! You're missing a parameter. "
+  end
 end
+
 
 # displays current profile
 get '/profile' do
    authenticate!
    pro_only!
    erb :account_profile
-end
-
-def matching
-  values = current_user.skills.split(",")
-  alljobs = Listing.all
-
-     alljobs.each do |v|
-     v.count = 0
-     internskill = v.description.split(",")
-
-           internskill.each do |i|
-              values.each do |c|
-                 if (c.downcase == i.downcase)
-                 add = v.count.to_i+ 1
-                 v.count = add
-                 end
-                 v.save
-              end
-           end
-     end
 end

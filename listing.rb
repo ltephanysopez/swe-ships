@@ -22,9 +22,23 @@ end
 
 get '/listings' do
    authenticate!
-   @lastings = Listing.all
-   
-   erb :listings
+   if (current_user.pro == false)
+    @lasting = Listing.all(:id.gt => 0, :id.lt => 11)
+    erb :listings
+  else
+    @lasting = Listing.all(:count.gt=> 1)
+    erb :listings
+  end
+end
+
+get 'listings/preferred-location' do 
+  pro_only!
+  if (current_user.preferred_location != nil)
+    @lasting = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
+    erb :listings
+  else
+  return "You do not have any preferred locations!" 
+end
 end
 
 get '/listings/new' do

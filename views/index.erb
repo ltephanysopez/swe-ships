@@ -2,18 +2,19 @@
   <div class="grid-container">
      <% if current_user %>
       <div class="item1">
-         <p>
-           Welcome back <br/>
-         </p>
+         <p class="animated slideInDown"> Welcome back <%= current_user.full_name %><br/> </p>
       </div>
-
-
-    <div class="item2">
-      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
-    </div>
-</div>
+      <div class="item2">
+         <p> <%= youtube_embed ("watch?v=kWGs4wKgzMU") %> </p>
+      </div>
+   </div>
 </div>
 <div class="free-vs-premium">
+   <br/>
+   <br/>
+   <h1>View internships free or upgrade to Premium.</h1>
+   <br/>
+   <br/>
    <div class="row">
   <div class="col-sm-4">
     <div class="card">
@@ -64,12 +65,12 @@
     <% else %>
     <div class="item1">
       <br/>
-      <p>
+      <p class="animated slideInDown">
          We connect software engineering <br/>
          students with internships <br/>
          relevant to their skills.
       </p>
-     <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+     <button type="button" class="btn btn-light btn-lg animated slideInDown" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
     </div>
     <div class="item2">
       <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>

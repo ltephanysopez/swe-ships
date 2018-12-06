@@ -1,4 +1,4 @@
-require 'data_mapper' 
+require 'data_mapper'
 require_relative 'listing.rb'
 require 'stripe'
 
@@ -7,8 +7,6 @@ set :secret_key, "sk_test_aTWBdKlOMVvvoJtaz7xjfFIg"
 
 Stripe.api_key = settings.secret_key
 
-
-require_relative "listing.rb"
 
 if ENV['DATABASE_URL']
   DataMapper::setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
@@ -41,6 +39,7 @@ Listing.auto_upgrade!
 #make an admin user if one doesn't exist!
 if User.all(administrator: true).count == 0
 	u = User.new
+   u.full_name = "Admin"
 	u.email = "admin@admin.com"
 	u.password = "admin"
 	u.administrator = true
@@ -67,7 +66,7 @@ post "/charge" do
     :currency    => 'usd',
     :customer    => customer.id
   )
-  erb :charge
+  erb :account_profile
 end
 
 
@@ -87,7 +86,7 @@ get '/account/edit_profile' do
    erb :edit_profile
 end
 
-# updates user account with name, skills, and preferred location
+# Updates user account with name, skills, and preferred location
 post '/update_profile' do
    if params["full_name"] && params["skills"]
       current_user.full_name = params["full_name"]
@@ -95,8 +94,7 @@ post '/update_profile' do
       current_user.preferred_location = params["preferred_location"]
       current_user.save
 
-      # matching algorithm
-      # Tarana was here
+      # Matching algorithm
       values = current_user.skills.split(',')
       alljobs = Listing.all
       alljobs.each do |v|
@@ -107,7 +105,7 @@ post '/update_profile' do
           values.each do |c|
             if (c.downcase == i.downcase)
               add = v.count.to_i+ 1
-              v.count =add
+              v.count = add
             end
             v.save
           end
@@ -120,7 +118,7 @@ post '/update_profile' do
 end
 
 
-# displays current profile
+# GET request that displays a pro user's current profile
 get '/profile' do
    authenticate!
    pro_only!

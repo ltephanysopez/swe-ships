@@ -4,10 +4,16 @@
    <h1>Internships</h1>
 
    <!-- Display different messages for pro and free users -->
-   <% if (current_user.pro == true || current_user.administrator == true ) %>
+   <% if (current_user.pro == true) %>
    <p>The following internships are based on the skills on your profile: <span class="badge badge-light"><%= current_user.skills%></span></p>
+   <% elsif (current_user.administrator == true ) %>
+   <p>The following internships are ALL internships stored in the database.</p>
    <% else %>
-   <p>Upgrade to PREMIUM to get internships based on your skills: <span class="badge badge-light"><%= current_user.skills%></span></p>
+   <p>The following listings are the top ten internships in our database. <br/>
+       To view dozens of internships matched specifically to your skills,
+       upgrade for a one time charge of $5.00. <br/>
+       <span class="badge badge-secondary"><a href="/user/upgrade">UPGRADE</a></span>
+   </p>
    <% end %>
    <!--****************************************************************-->
    <br/>
@@ -24,7 +30,9 @@
        Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/>
       <br/>
       <%= j.description %>
-   </p>
+      <br/>
+      <br/>
+      <br/>
 
    <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
    <% i += 1 %>

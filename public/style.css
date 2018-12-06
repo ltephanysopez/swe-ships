@@ -249,7 +249,8 @@ a {
 
 /* MODAL BODY */
 .modal-header {
-   background: rgba(255,152,112,1);
+   background-image:url("https://images.pexels.com/photos/1544880/pexels-photo-1544880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   background-position: center;
    color:white;
 }
 
@@ -349,6 +350,7 @@ ul {
 }
 
 
-.free-vs-premium {
-   margin:0px 200px 0px 200px;
+.free-vs-premium h1 {
+   text-align: center;
+   font-family:'Karla';
 }

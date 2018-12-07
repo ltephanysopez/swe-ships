@@ -8,10 +8,16 @@
 <form action="/update_profile" method="POST">
    <div class="row" id="aisle">
          <div class="col-6">
-            <label for="userName">Full name </label>
-            <input type="text" class="form-control" placeholder="<%= current_user.full_name%>" name="full_name">
+            <label for="first_name">First name </label>
+            <input type="text" class="form-control" placeholder="<%= current_user.first_name%>" name="first_name">
          </div>
         <br/>
+        <div class="col-6">
+           <label for="last_name">Last name </label>
+           <input type="text" class="form-control" placeholder="<%= current_user.last_name%>" name="last_name">
+        </div>
+      <br/>
+      <br/>
         <div class="col-6">
             <label for="listingDescription">Skills</label>
             <input type="text" class="form-control" placeholder="<%= current_user.skills%>" name="skills">

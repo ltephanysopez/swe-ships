@@ -1,53 +1,122 @@
 <div class="jumbotron">
-  <div class="grid-container">
+   <br/>
+   <br/>
      <% if current_user %>
-      <div class="item1">
-         <p>
-           Welcome back <br/>
-         </p>
-      </div>
-    <div class="item2">
-      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
-    </div>
+     <br/>
+     <br/>
+     <br/>
+     <h1>Welcome back</h1>
+     <br/>
+     <br/>
+     <br/>
     <% else %>
-    <div class="item1">
       <br/>
-      <p>
-         We connect software engineering <br/>
-         students with internships <br/>
-         relevant to their skills.
-      </p>
-     <p><a class="btn btn-primary btn-lg hvr-shrink" href="/sign_up" role="button">Sign Up</a></p>
-    </div>
-    <div class="item2">
-      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
+      <br/>
+      <strong><h1> The easiest way to find an internship. </strong></h1>
+      <p>Built by software engineering students, for software engineering students. </p>
+      <br/>
+    <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+      <br/>
     </div>
    <% end %>
   </div>
 </div>
 
-  
-<div class="about-app">
-  <h2>HOW DOES IT WORK?</h2>
-  <h5 align="center"><u>Still got questions? don't worry!
-  the website's functionalities are described in detail below:</u></h5>
- 
-  <h5>FREE USERS</h5>
-  <p>Sing up with your <b>UTRGV</b> email to become a free user! as such, you will be able to see
-  up to ten great opportunities currently open under <b>"Internships"</b>. </br>
- 
-  <h5>PREMIUM USERS</h5>
-  For a better experience, <b>upgrade</b> to become a PREMIUM user by paying a one-time fee of 5 USD. </br>
-  PREMIUM users can create a personal profile and:
+<div class="listings">
+   <% i = 0 %>  <!-- variable for looping through internships 10 times (FREE USERS) -->
 
-  <ul>
-    <li>Input their name</li>
-    <li>Add their skills and abilities (e.g. C++, HTML, Ruby)</li>
-    <li>Specify their preferred location to work on (state)</li>
-  </ul>
-  <p>You can always come back and edit your profile if you need to make any changes.</br></br>
-    As a PREMIUM user, internship opportunities will be "matched" to you: only those requiring
-    your skills and abilities, as well as your preferred location, will be displayed. </br>
-    From there, you can just click on <b>Apply</b> and will be automatically taken directly to the website.
-  </p>
-</div>  
+   <% @lastings.each do |j| %>
+      <img src="<%= j.logo %>" width="90" height="90">
+      <h3><%= j.title %></h3>
+      <a href="<%= j.l_url %>"  target="_blank"><button type="button" class="btn btn-primary">Apply</button></a>
+      <p><strong><%= j.company %> </strong><br/>
+      <%= j.location %> <br/>
+       Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/>
+      <br/>
+      <%= j.description %>
+      <br/>
+      <br/>
+      <hr>
+      <br/>
+
+   <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
+   <% i += 1 %>
+   <% break if i == 15 %>
+<% end %>
+</div>
+<div class="free-vs-premium">
+   <br/>
+   <br/>
+   <h1>View internships free or upgrade to Premium.</h1>
+   <br/>
+   <br/>
+   <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+         <strong><h4>Free</h4></strong>
+         <h4>$0.00</h4>
+         <hr>
+         <br/>
+         <ul>
+           <li class="premium-benefits"> Create account </li>
+           <li class="free-benefits"> Customize profile </li>
+           <li class="free-benefits"> View top 10 internships </li>
+           <li class="free-benefits"> View internships based on your skills </li>
+           <li class="free-benefits"> View internships based on your preferred location </li>
+          </ul>
+          <br/>
+          <hr>
+        <a href="#" class="btn btn-free card-btn hvr-fade"><strong>GET FREE</strong></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <strong><h4>Premium</h4></strong>
+        <h4>$5.00</h4>
+        <hr>
+        <br/>
+        <ul>
+          <li class="premium-benefits"> Create account </li>
+          <li class="premium-benefits"> Customize profile </li>
+          <li class="premium-benefits"> View top 10 internships </li>
+          <li class="premium-benefits"> View internships based on your skills </li>
+          <li class="premium-benefits"> View internships based on your preferred location </li>
+         </ul>
+         <br/>
+         <hr>
+        <a href="/" class="btn btn-premium card-btn hvr-fade"><strong>GET PREMIUM</strong></a>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+</div>
+<div class="about-app">
+   <h1>Frequently Asked Questions</h1>
+      <hr>
+
+   <br/>
+   <br/>
+      <div class="grid">
+            <div class="grid-item-one">
+              <h2>Get started</h2>
+              <p>To gain access to all internship listings, you'll need to create an account
+                 with your UTRGV or UT student email address. After signing up, you can
+                 view all listings under the <a href="/listings">Internships</a> tab.
+              </p>
+            </div>
+            <div class="grid-item-two">
+              <h2>premium users</h2>
+              <p>For a better experience, <b>upgrade</b> to become a PREMIUM user by paying a one-time fee of 5 USD.
+              PREMIUM users can create a personal profile and.
+              </p>
+            </div>
+     </div>
+</div>
+<br/>
+<br/>

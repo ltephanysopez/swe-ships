@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-  <a class="navbar-brand" href="/">&nbsp;&nbsp;swe-ships</a>
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <a class="navbar-brand" href="/">&nbsp;&nbsp;interns.io</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,13 +34,87 @@
       </li>
       &nbsp;
         <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
         </li>
         &nbsp;
         <li class="nav-item">
-          <a class="nav-link" href="/sign_up">Sign Up</a>
+          <a class="nav-link" data-toggle="modal" data-target="#signUpModal" href="#">Sign Up</a>
         </li>
       <% end %>
     </ul>
   </div>
 </nav>
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">&nbsp;Sign Up</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <br/>
+         <form id="signUpForm" action="register" method="POST">
+         <div class="row" id="aisle">
+           <div class="col-md-5">
+             <label for="first_name">First name</label>
+             <input type="first_name" class="form-control" placeholder="Ada" name ="first_name" required>
+             </div>
+             <div class="col-md-5">
+           <label for="last_name">Last name</label>
+           <input type="last_name" class="form-control" placeholder="Lovelace" name ="last_name" required>
+          </div>
+          </div>
+          <br/>
+           <div class="col-md-11">
+             <label for="email">Email address </label>
+             <input type="email" class="form-control" placeholder="name@gmail.com" name ="email" required>
+           </div>
+           <br/>
+           <div class="col-md-11">
+             <label for="password">Password</label>
+             <input type="password" class="form-control" placeholder="Create a password" name="password" required>
+           </div>
+           <br/>
+         <p class="terms-link"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By signing up, you're agreeing to our <a href="#">Terms of Use.</a></p>
+         <br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">&nbsp;Login</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form id="loginForm" action="/process_login" method="POST">
+           <div class="col-md-11">
+             <label for="email">E-mail address</label>
+             <input type="email" class="form-control" placeholder="user@gmail.com" name ="email" required>
+            <br/>
+           </div>
+           <div class="col-md-11">
+             <label for="password">Password</label>
+             <input type="password" class="form-control" placeholder="Password" name="password" required>
+           </div>
+           <br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+         <br/>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>swe-ships</title>
+	<title>interns.io</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Niramit|Nunito|Abril+Fatface|Work+Sans:400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Shrikhand|Lato:300|Quicksand|Karla" rel="stylesheet">
+	<link rel="icon" href="/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/stylez.css">
 	<link rel="stylesheet" type="text/css" href="/animate.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(window).on('load',function(){
+			$('.loader').addClass('complete')
+		})
+
+		$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+	</script>
 	<base href="/">
 </head>
 <body>
@@ -13,30 +27,23 @@
 	<%= erb :navigation %>
 
 	<main role="main">
+		<div class="loader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 
 		<%= yield %>
 
 	</main>
-
-
+	<div class="slogan">
+		<h1>interns.io</h1>
+		<strong><h3>
+         the easiest way to find an internship </h3> </strong>
+	</div>
     <footer class="end">
-		 <div class="footer-grid">
-      <div class="footer-one">
-      	<p>swe-ships<p>
-      </div>
-		<div class="footer-two">
-			<p>&copy; Copyright swe-ships 2018. All rights reserved.</p>
-			<p><a href="/terms-of-use">Terms of Use </a>• <a href="/privacy-policy">Privacy Policy</a> • <a href="#">General Inquiries</a> • <a href="#">Investors</a> </p>
-		</div>
-		<div class="footer-three">
-		<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width=40 height=40>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width=40 height=40>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="https://image.flaticon.com/icons/svg/185/185985.svg" width=40 height=40>
-		</div>
+			<p>&copy; Copyright interns.io 2018. All rights reserved.</p>
     </footer>
-
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -42,11 +42,12 @@ post "/register" do
 	password = params[:password]
 
 	#Check domain = "@utrgv.edu"
-	domain = "@utrgv.edu"
+	google_domain = "@gmail.com"
+	yahoo_domain = "@yahoo.com"
 	e_length = email.length
 	e_domain = email[(e_length-10),10]
 
-	if(e_domain == domain)
+	if(e_domain == google_domain || e_domain == yahoo_domain)
 		u = User.new
 		u.email = email.downcase
 		u.password =  password
@@ -56,7 +57,6 @@ post "/register" do
 	else
 		erb :"authentication/invalid_signup"
 	end
-
 end
 
 #This method will return the user object of the currently signed in user

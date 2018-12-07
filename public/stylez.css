@@ -95,7 +95,7 @@ body {
 
 /* JUMBOTRON */
 .jumbotron {
-   padding:120px 100px 100px 100px;
+   padding-left:50px;
    background-image:url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
    color:white;
 }
@@ -106,7 +106,7 @@ body {
 
 .jumbotron p {
    font-size:20px;
-   font-weight: 300;
+   font-weight:300;
 }
 
 /* INDEX PAGE */
@@ -116,7 +116,9 @@ body {
 }
 
 .listings {
-   margin: 100px 100px 50px 150px;
+   width:80%;
+   margin: auto;
+   overflow: hidden;
    font-family: 'Nunito', sans-serif;
 }
 
@@ -129,7 +131,7 @@ body {
 /* COMPANY LOGO */
 .listings img {
    float:left;
-   margin:10px 20px 10px 10px;
+   margin:0px 20px 0px 0px;
 }
 
 .listings button {
@@ -333,7 +335,7 @@ ul {
 
 .card-btn {
    align-items: center;
-   width:100%;
+   width:80%;
    max-width: 300px;
    padding:12px 0px 12px 0px;
    border-radius: 25px;
@@ -362,11 +364,12 @@ ul {
    font-weight: 200;
 }
 
-.row {
-   margin: 0px 100px 0px 100px;
-   align-self: center;
-}
 
-#free {
-   margin: 0px 0px 0px 200px;
+/* Media Queries */
+@media (max-width: 768px) {
+   .jumbotron h1 {
+      font-size: 3em;
+   }
+   .listings {
+   }
 }

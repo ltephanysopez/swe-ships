@@ -5,7 +5,7 @@
      <br/>
      <br/>
      <br/>
-     <h1 class="animated slideInDown"> Welcome back <%= current_user.full_name %><br/> </h1>
+     <h1 class="animated slideInDown"> Welcome back <%= current_user.full_name %> </h1>
      <br/>
      <br/>
      <br/>
@@ -17,12 +17,15 @@
       <br/>
     <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
       <br/>
+      <br/>
     </div>
    <% end %>
   </div>
 </div>
 
 <div class="listings">
+   <br/>
+   <br/>
    <% i = 0 %>  <!-- variable for looping through internships 10 times (FREE USERS) -->
 
    <% @lastings.each do |j| %>
@@ -46,14 +49,10 @@
 </div>
 
 <div class="free-vs-premium">
-   <% if current_user %>
-   <h3>Want to see more internships? Upgrade to premium. </h3>
-   <% else %>
    <h3>Want to see more internships? Sign up for free or upgrade to premium for a one time charge of $5.00. </h3>
-   <% end %>
    <br/>
    <br/>
-   <div class="row">
+   <div class="container">
   <div class="col-sm-4" id="free">
     <div class="card">
       <div class="card-body">

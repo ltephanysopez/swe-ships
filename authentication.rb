@@ -19,7 +19,7 @@ post "/process_login" do
 
 	if(user && user.login(password))
 		session[:user_id] = user.id
-		redirect "/"
+		redirect "/listings"
 	else
 		erb :"authentication/invalid_login"
 	end
@@ -38,18 +38,19 @@ end
 
 post "/register" do
 	#FREE users
+	full_name = params[:full_name]
 	email = params[:email]
 	password = params[:password]
 
 	#Check domain = "@utrgv.edu"
-	google_domain = "@gmail.com"
-	yahoo_domain = "@yahoo.com"
+	domain = "@utrgv.edu"
 	e_length = email.length
 	e_domain = email[(e_length-10),10]
 
-	if(e_domain == google_domain || e_domain == yahoo_domain)
+	if(e_domain == domain)
 		u = User.new
 		u.email = email.downcase
+		u.full_name = full_name
 		u.password =  password
 		u.save
 		session[:user_id] = u.id
@@ -57,6 +58,7 @@ post "/register" do
 	else
 		erb :"authentication/invalid_signup"
 	end
+
 end
 
 #This method will return the user object of the currently signed in user

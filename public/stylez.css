@@ -53,10 +53,11 @@ body {
 
 .navbar {
   font-weight: 100;
+  color:#310e60;
 }
 
 .navbar .navbar-brand {
-  color: grey;
+  color: #310e60;
   font-weight:100;
   font-size:25px;
 }
@@ -69,7 +70,7 @@ body {
   color: #b691e0;
 }
 .navbar .navbar-nav .nav-link {
-  color: grey;
+  color: #310e60;
   border-radius: .25rem;
   margin: 0 0.25em;
 }
@@ -88,7 +89,7 @@ body {
 }
 
 .fixed-top.scrolled {
-  background-color: #fff !important;
+  background-color: #F9F9F9 !important;
   transition: background-color 200ms linear;
 }
 
@@ -312,11 +313,11 @@ ul {
   color:grey;
 }
 
-/* Coral colored button */
+/* Lavender colored button */
 .btn-premium {
    color: #ffffff;
-   background-color: #FF9870;
-   border-color: #FF9870;
+   background-color: #A78FE8;
+   border-color: #A78FE8;
    font-family: 'Nunito';
 }
 
@@ -326,8 +327,8 @@ ul {
 .btn-premium.active,
 .open .dropdown-toggle.btn-premium {
    color: #ffffff;
-   background-color: #FFA37F;
-   border-color: #FF9870;
+   background-color: #4f28b7;
+   border-color: #4f28b7;
 }
 
 .card-btn {
@@ -338,11 +339,11 @@ ul {
    border-radius: 25px;
 }
 
-/* White button with coral colored text and border */
+/* White button with lavender colored text and border */
 .btn-free {
-   color: #FF9870;
+   color: #AF83E7;
    background-color: #FFFFFF;
-   border-color: #FF9870;
+   border-color: #AF83E7;
    font-family: 'Nunito';
 }
 
@@ -351,13 +352,21 @@ ul {
 .btn-free:active,
 .btn-free.active,
 .open .dropdown-toggle.btn-free {
-   color: #FF9870;
+   color: #4f28b7;
    background-color: #FFFFFF;
-   border-color: #FF9870;
+   border-color: #4f28b7;
 }
 
-
-.free-vs-premium h1 {
+.free-vs-premium h3 {
    text-align: center;
-   font-family:'Karla';
+   font-weight: 200;
+}
+
+.row {
+   margin: 0px 100px 0px 100px;
+   align-self: center;
+}
+
+#free {
+   margin: 0px 0px 0px 200px;
 }

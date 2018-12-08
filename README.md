@@ -2,6 +2,7 @@
 
 Live application:
 
+
 ## About
 
 A problem many Computer Science and Computer Engineering students encounter is the difficulty in finding internship opportunities that fit their skills; many of us do not know where to search for them, or do not know if we are suitable for the position.
@@ -57,7 +58,7 @@ To build the application, we used:
 - DataMapper
 - Google Fonts
 
-Additionally, Slack, Git, and Github were used to discuss the project timeline and progress. 
+Additionally, Slack, Git, and Github were used to discuss the project timeline and progress.
 ## Authors
 - Stephany Lopez
 - Cecy Sanchez

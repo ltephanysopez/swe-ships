@@ -43,6 +43,10 @@ bundle exec ruby app.rb
 
 By default the server runs on port 4567, so to view the application on your local machine, head to http://localhost:4567/
 
+## Project Management
+
+### Databases
+(https://github.com/ltephanysopez/se-final-project/blob/master/docs/databases.png)
 
 ## Tech Stack
 To build the application, we used:
@@ -57,6 +61,8 @@ To build the application, we used:
 - PostgreSQL
 - DataMapper
 - Google Fonts
+
+
 
 Additionally, Slack, Git, and Github were used to discuss the project timeline and progress.
 ## Authors

@@ -45,12 +45,18 @@ By default the server runs on port 4567, so to view the application on your loca
 
 ## Project Management
 
+### Wireframing
+
+![Index Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/index.png)
+
+![Listings Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/listings.png)
+
 ### Databases
 The application makes use of a two databases, described as follows:
 - User database: Stores the data of free and signed up users. Free users may have empty fields such as “skills” and “preferred location” since they are not needed in their case. Premium users, on the other hand, should fill have fields complete in order to see internship listings.
 - Listings database: Stores the data of every internship listing an administrator adds.
 
-The local databases were implemented and tested using SQLite3 accessed via DataMapper. When deploying our application with Heroku, the database migrated to PostgreSQL. 
+The local databases were implemented and tested using SQLite3 accessed via DataMapper. When deploying our application with Heroku, the database migrated to PostgreSQL.
 
 ![Database Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/databases.png)
 

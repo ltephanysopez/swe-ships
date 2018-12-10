@@ -2,6 +2,51 @@ a {
    color:white;
 }
 
+
+/* PAGE LOADER */
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.loader div{
+	height: 20px;
+	width: 20px;
+	margin-left: 20px;
+	border-radius: 50%;
+	background: #ffc6af;
+	position: relative;
+	float: left;
+	animation: move 1s linear infinite;
+}
+
+@keyframes move{
+	0%,60%,100%{
+		top: 0;
+	}
+	30%{
+		top: -30px;
+	}
+}
+
+.loader div:nth-child(1){
+	animation-delay: 0s;
+}
+.loader div:nth-child(2){
+	animation-delay: 0.2s;
+}
+.loader div:nth-child(3){
+	animation-delay: 0.4s;
+}
+
+.loader.complete {
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+}
+
 .navbar {
   font-family: 'Nunito';
   font-weight: 100;
@@ -87,6 +132,16 @@ a {
 
 .listings h3 {
    color:#FF9870;
+}
+
+span a {
+   text-decoration: none;
+   color:white;
+   font-size: 1.25em;
+}
+span a:hover {
+   color:white;
+   text-decoration: none;
 }
 
 /* UPLOAD A NEW INTERNSHIP PAGE */
@@ -291,9 +346,19 @@ ul {
   list-style: none;
 }
 
+.card-rows {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   padding:20px 0px 0px 100px;
+}
+
 .card-body {
    font-family: 'Karla', sans-serif;
 }
+
 /* Black premium checkmark */
 .premium-benefits {
   list-style-image:url("/images/checklist.png");
@@ -325,10 +390,11 @@ ul {
 
 .card-btn {
    align-items: center;
-   width:100%;
+   width:80%;
    max-width: 300px;
    padding:12px 0px 12px 0px;
    border-radius: 25px;
+   margin:0px 20px 0px 20px;
 }
 
 /* White button with coral colored text and border */
@@ -349,8 +415,31 @@ ul {
    border-color: #FF9870;
 }
 
-
 .free-vs-premium h1 {
    text-align: center;
    font-family:'Karla';
+}
+
+/* ALERTS */
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    /* margin-bottom: 1rem; */
+    margin: 50px 0px 0px 100px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+   .col-sm-5 {
+       -webkit-box-flex: 0;
+       -ms-flex: 0 0 33.333333%;
+       flex: 0 0 33.333333%;
+       max-width: 33.333333%;
+       min-width: 350px;
+   }
+   .card-rows {
+      padding:0px 0px 0px 0px;
+   }
 }

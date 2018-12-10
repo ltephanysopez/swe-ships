@@ -88,8 +88,7 @@ end
 
 # Updates user account with name, skills, and preferred location
 post '/update_profile' do
-   if params["full_name"] && params["skills"]
-      current_user.full_name = params["full_name"]
+   if params["skills"]
       current_user.skills = params["skills"]
       current_user.preferred_location = params["preferred_location"]
       current_user.save
@@ -121,6 +120,5 @@ end
 # GET request that displays a pro user's current profile
 get '/profile' do
    authenticate!
-   pro_only!
    erb :account_profile
 end

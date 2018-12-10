@@ -6,6 +6,8 @@
    <!-- Display different messages for pro and free users -->
    <% if (current_user.pro == true) %>
    <p>The following internships are based on the skills on your profile: <span class="badge badge-light"><%= current_user.skills%></span></p>
+   <span class="badge badge-info"><a href="/account/edit_profile">Edit profile</a></span>
+   <br/>
    <% elsif (current_user.administrator == true ) %>
    <p>The following internships are ALL internships stored in the database.</p>
    <% else %>

@@ -6,15 +6,12 @@
 <br/>
 <br/>
 <form action="/update_profile" method="POST">
+   <p>E-mail: <%= current_user.email %></p>
+   <p>Name: <%= current_user.full_name %></p>
    <div class="row" id="aisle">
-         <div class="col-6">
-            <label for="userName">Full name </label>
-            <input type="text" class="form-control" placeholder="<%= current_user.full_name%>" name="full_name" required>
-         </div>
-        <br/>
         <div class="col-6">
             <label for="listingDescription">Skills</label>
-            <input type="text" class="form-control" placeholder="<%= current_user.skills%>" name="skills" required>
+            <input type="text" data-role="tagsinput" class="form-control" name="skills" value="<%= current_user.preferred_location%>" required>
         </div>
         <br/>
      </div>
@@ -22,11 +19,10 @@
      <div class="row" id="aisle">
      <div class="col-6">
          <label for="listingDescription">Preferred Location (optional)</label>
-         <input type="text" class="form-control" placeholder="<%= current_user.preferred_location%>" name="preferred_location">
+         <input type="text" class="form-control" value="<%= current_user.preferred_location%>" name="preferred_location">
     </div>
     </div>
     <br/>
-     <p>E-mail: <%= current_user.email %></p>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <br/>

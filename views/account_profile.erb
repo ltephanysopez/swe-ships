@@ -17,3 +17,9 @@
 <br/>
 <br/>
 <br/>
+
+<% if (current_user.pro == true) %>
+<p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
+<% else %>
+<p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
+<% end %>

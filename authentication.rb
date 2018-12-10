@@ -19,7 +19,7 @@ post "/process_login" do
 
 	if(user && user.login(password))
 		session[:user_id] = user.id
-		redirect "/listings"
+		redirect "/profile"
 	else
 		erb :"authentication/invalid_login"
 	end
@@ -54,11 +54,12 @@ post "/register" do
 		u.password =  password
 		u.save
 		session[:user_id] = u.id
-		erb :"authentication/successful_signup"
+		flash[:success] = "Successfully signed up!"
+    erb :account_profile
 	else
-		erb :"authentication/invalid_signup"
+		flash[:error]= "Error, failed to sign up"
+		redirect "/sign_up"
 	end
-
 end
 
 #This method will return the user object of the currently signed in user

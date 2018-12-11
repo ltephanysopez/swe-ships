@@ -2,7 +2,7 @@
 <br/>
 <br/>
 <br/>
-<h1>Account Profile</h1>
+<h1>Account Details</h1>
 <br/>
 <br/>
 <p>Email: <%= current_user.email %> </p>
@@ -13,13 +13,21 @@
 <br/>
 <p>Preferred location: <%= current_user.preferred_location %></p>
 <br/>
-<p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
+   <% if (current_user.administrator == true && current_user.pro == false) %>
+   <p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
+   <br/>
+   <div class="alert alert-warning">You currently do not have access to edit your
+      profile because you are an administrator. </div>
+   <% elsif (current_user.pro == true) %>
+      <p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
+   <% else %>
+      <p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
+      <br/>
+      <div class="alert alert-warning">You currently do not have access to edit your profile because you are a
+         free member. <a href="/user/upgrade" class="alert-link">Upgrade</a> to premium to edit your skills and be matched with
+         dozens of internships tailored to you.</div>
+   <% end %>
+<br/>
+</div>
 <br/>
 <br/>
-<br/>
-
-<% if (current_user.pro == true) %>
-<p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
-<% else %>
-<p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
-<% end %>

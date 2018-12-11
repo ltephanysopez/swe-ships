@@ -48,7 +48,7 @@ a {
 }
 
 .navbar {
-  font-family: 'Nunito';
+  font-family: 'Nunito', sans-serif;
   font-weight: 100;
   color:white;
   background: #355C7D;
@@ -84,12 +84,12 @@ a {
 .navbar .navbar-nav .nav-item.show .nav-link:hover,
 .navbar .navbar-nav .nav-item.show .nav-link:focus {
   color: #FF9870;
-  background-color:#f9f9f9;
+  background: #355C7D;
 }
 
-/*
-.fixed-top.scrolled {
-  background-color: #355C7D !important;
+
+/*.fixed-top.scrolled {
+  background-color: #fff !important;
   transition: background-color 200ms linear;
 }
 */
@@ -115,10 +115,6 @@ a {
    font-family: 'Nunito', sans-serif;
 }
 
-/* JOB TITLE */
-.listings h3 {
-   color:blue;
-}
 
 /* COMPANY LOGO */
 .listings img {
@@ -126,10 +122,12 @@ a {
    margin:10px 20px 10px 10px;
 }
 
+/* JOB APPLY BUTTON */
 .listings button {
    float:right;
 }
 
+/* JOB TITLE */
 .listings h3 {
    color:#FF9870;
 }
@@ -166,7 +164,7 @@ span a:hover {
    padding:75px 100px 0px 100px;
    background:#355C7D;
    color: white;
-   font-family: 'Nunito', sans-serif;
+   font-family: 'Work Sans', sans-serif;
 }
 
 .footer-grid {
@@ -228,15 +226,37 @@ span a:hover {
    font-size: 30px;
 }
 
-.about-app {
+.how-it-works {
   background-color: white;
   margin: 100px 60px 100px 60px;
   font-family: 'Nunito', sans-serif;
   color:#355C7D;
 }
 
-.about-app > h2 {
+.how-it-works h2 {
  text-align: center;
+ padding: 0px 0px 0px 20px;
+}
+
+.current-about-p  {
+   font-size: 1.2em;
+   padding: 10px 20px 20px 20px;
+   color:black;
+}
+
+.about {
+   background-color: white;
+   margin: 100px 60px 100px 60px;
+   font-family: 'Nunito', sans-serif;
+   color:#355C7D;
+}
+
+
+#current-about {
+   font-size: 4em;
+   text-align: left;
+   font-family: 'Abril Fatface';
+   color: #FF9870;
 }
 
 /* Shrink */
@@ -352,7 +372,7 @@ ul {
    display: flex;
    -ms-flex-wrap: wrap;
    flex-wrap: wrap;
-   padding:20px 0px 0px 100px;
+   padding:20px 0px 0px 170px;
 }
 
 .card-body {
@@ -415,9 +435,9 @@ ul {
    border-color: #FF9870;
 }
 
-.free-vs-premium h1 {
+.free-vs-premium h2 {
    text-align: center;
-   font-family:'Karla';
+   font-family:'Nunito';
 }
 
 /* ALERTS */
@@ -425,7 +445,6 @@ ul {
     position: relative;
     padding: .75rem 1.25rem;
     /* margin-bottom: 1rem; */
-    margin: 50px 0px 0px 100px;
     border: 1px solid transparent;
     border-radius: .25rem;
 }

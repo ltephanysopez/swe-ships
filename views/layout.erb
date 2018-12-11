@@ -13,6 +13,13 @@
 		$(window).on('load',function(){
 			$('.loader').addClass('complete')
 		})
+
+		$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
 	</script>
 	<base href="/">
 </head>

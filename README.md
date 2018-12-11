@@ -83,7 +83,9 @@ To build the application, we used:
 Additionally, Slack, Git, and Github were used to discuss the project timeline and progress.
 ## Authors
 - [Stephany Lopez](https://www.ltephanysopez.com)
-- Cecy Sanchez
+- [Cecy Sanchez](https://acsanchezr.github.io/)
 - Tarana Mou
 
 ## Acknowledgement
+
+A special thank you to Eric Martinez, who assisted us throughout the project.

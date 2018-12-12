@@ -9,7 +9,7 @@ A problem many Computer Science and Computer Engineering students encounter is t
 
 To solve this problem, we created a web application that targets CSCI/CMPE students at UTRGV pursuing job opportunities in Software Engineering. The application works with an algorithm that matches internship postings with a student based on a their skills and qualifications. Our system allows for students to create an account, input their skills and qualifications, as well as their desired location to work in. Based on these inputs, the application returns listings that match from our database.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Page Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/sweships.gif)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Page Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/sweships.gif)
 
 ## Features
 The primary features of this application include the following:

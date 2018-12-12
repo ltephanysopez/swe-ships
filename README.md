@@ -1,6 +1,6 @@
 # Software Engineering Final Project
 
-Live application:
+Live application: https://sweships.herokuapp.com/
 
 
 ## About

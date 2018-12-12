@@ -47,7 +47,7 @@ get '/listings/preferred-location' do
     @lastings = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
     erb :listings
   else
-  return "You do not have any preferred locations!"
+     erb :no_preference
 end
 end
 

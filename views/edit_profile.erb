@@ -10,7 +10,7 @@
    <p>Name: <%= current_user.full_name %></p>
    <div class="row" id="aisle">
         <div class="col-6">
-            <label for="listingDescription">Skills</label>
+            <label for="listingDescription">Skills (Ex: Python, Java, Photoshop)</label>
             <input type="text" data-role="tagsinput" class="form-control" name="skills" value="<%= current_user.skills%>" required>
         </div>
         <br/>
@@ -18,7 +18,7 @@
      <br/>
      <div class="row" id="aisle">
      <div class="col-6">
-         <label for="listingDescription">Preferred Location (optional)</label>
+         <label for="listingDescription">Preferred Location (if you have no preference, type "Multiple locations")</label>
          <input type="text" class="form-control" value="<%= current_user.preferred_location%>" name="preferred_location">
     </div>
     </div>

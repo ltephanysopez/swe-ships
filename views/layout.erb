@@ -29,29 +29,11 @@
 
 	<main role="main">
 
-
-				<% if flash[:success] %>
-					<div class="pt-5">
-						<div class="alert alert-success alert-dismissible fade show container" role="alert">
-						  <%= flash[:success] %>
-						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						    <span aria-hidden="true">&times;</span>
-						  </button>
-						</div>
-					</div>
-
-				<% end %>
-
-				<% if flash[:error] %>
-					<div class="pt-5">
-						<div class="alert alert-danger alert-dismissible fade show container" role="alert">
-						  <%= flash[:error] %>
-						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						    <span aria-hidden="true">&times;</span>
-						  </button>
-						</div>
-					</div>
-				<% end %>
+		<div class="loader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 
 			<%= yield %>
 

@@ -204,6 +204,15 @@ span a:hover {
    grid-area: header;
 }
 
+.item1 h1 {
+   font-size: 2em;
+   padding-bottom: 5px;
+}
+
+#logged-in {
+   font-size: 0.6em;
+}
+
 .item2 {
    grid-area: menu;
    align-items: center;

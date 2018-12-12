@@ -2,15 +2,15 @@
   <div class="grid-container">
      <% if current_user %>
       <div class="item1">
-         <h1 class="animated slideInDown"> Welcome back <%= current_user.full_name %><br/> </h1>
+         <br/>
+         <h1 class="animated slideInDown"> Welcome <%= current_user.full_name %></h1>
+         <p id="logged-in">Find dozens of internships tailored just for you by editing your profile.</p>
+         <br/>
       </div>
       <div class="item2">
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
-         <br/>
+        <video width="580" height="320" controls>
+         <source src="/images/index_video.mp4" type="video/mp4">
+        </video>
       </div>
    </div>
 </div>
@@ -96,7 +96,9 @@
      <button type="button" class="btn btn-light btn-lg animated slideInDown" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
     </div>
     <div class="item2">
-      <p><%= youtube_embed ("watch?v=kWGs4wKgzMU") %></p>
+      <video width="580" height="320" controls>
+     <source src="/images/index_video.mp4" type="video/mp4">
+      </video>
     </div>
     </div>
    </div>

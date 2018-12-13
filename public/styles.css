@@ -5,7 +5,7 @@ body {
 }
 
 
-/* PULSE LOADER */
+/* PAGE LOADER */
 .loader{
 	position: absolute;
 	top: 50%;
@@ -18,7 +18,7 @@ body {
 	width: 20px;
 	margin-left: 20px;
 	border-radius: 50%;
-	background: #668cff;
+	background: #cbc1ff;
 	position: relative;
 	float: left;
 	animation: move 1s linear infinite;
@@ -49,8 +49,7 @@ body {
    pointer-events: none;
 }
 
-
-
+/* NAVIGATION BAR */
 .navbar {
   font-weight: 100;
   color:#310e60;
@@ -73,6 +72,7 @@ body {
   color: #310e60;
   border-radius: .25rem;
   margin: 0 0.25em;
+  font-family: 'Lato';
 }
 .navbar .navbar-nav .nav-link:not(.disabled):hover,
 .navbar .navbar-nav .nav-link:not(.disabled):focus {
@@ -88,6 +88,10 @@ body {
   background-color:#f9f9f9;
 }
 
+.dropdown-item {
+   font-family:'Lato';
+}
+
 .fixed-top.scrolled {
   background-color: #F9F9F9 !important;
   transition: background-color 200ms linear;
@@ -95,7 +99,7 @@ body {
 
 /* JUMBOTRON */
 .jumbotron {
-   padding-left:50px;
+   padding-left:90px;
    background-image:url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
    color:white;
 }
@@ -138,6 +142,16 @@ body {
    float:right;
 }
 
+span a {
+   text-decoration: none;
+   color:white;
+   font-size: 1.25em;
+}
+span a:hover {
+   color:white;
+   text-decoration: none;
+}
+
 /* UPLOAD A NEW INTERNSHIP PAGE */
 .upload-listing {
    margin:100px 100px 50px 100px;
@@ -155,7 +169,6 @@ body {
 }
 
 /* FOOTER SECTION */
-
 .slogan {
    padding:50px 0px 50px 0px;
    text-align: center;
@@ -176,15 +189,12 @@ body {
    font-family: 'Nunito', sans-serif;
 }
 
-
 /* HOME PAGE */
 .about-app {
   background-color: #f9f9f9;
   padding: 100px 60px 100px 60px;
   color:#355C7D;
 }
-
-
 
 .grid {
    display:grid;
@@ -226,7 +236,6 @@ body {
    font-weight:700;
 }
 
-/* ACCOUNT PROFILE PAGE */
 
 /* Fade */
 .hvr-fade {
@@ -242,7 +251,7 @@ body {
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #2098D1;
+  background-color: #A78FE8;
   color: white;
 }
 
@@ -284,6 +293,10 @@ hr {
    font-size: 2.5em;
 }
 
+.terms-link {
+   padding-left: 20px;
+}
+
 .col-md-5 {
    padding-left: 47px;
    font-family: 'Lato', sans-serif;
@@ -296,6 +309,10 @@ hr {
    font-weight: 700;
 }
 
+.col-sm-4 {
+   padding-top: 20px;
+}
+
 /* CARD */
 ul {
   list-style: none;
@@ -304,6 +321,16 @@ ul {
 .card-body {
    font-family: 'Karla', sans-serif;
 }
+
+.card-rows {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   padding: 0px 0px 0px 120px;
+}
+
 /* Black premium checkmark */
 .premium-benefits {
   list-style-image:url("/images/checklist.png");
@@ -339,6 +366,7 @@ ul {
    max-width: 300px;
    padding:12px 0px 12px 0px;
    border-radius: 25px;
+   margin:0px 20px 0px 20px;
 }
 
 /* White button with lavender colored text and border */
@@ -364,12 +392,45 @@ ul {
    font-weight: 200;
 }
 
-
 /* Media Queries */
 @media (max-width: 768px) {
    .jumbotron h1 {
       font-size: 3em;
    }
-   .listings {
+   .jumbotron {
+      padding-left: 40px;
    }
+   .listings h3 {
+      font-size: 1.5em;
+   }
+   .free-vs-premium h3 {
+      padding: 0px 20px 0px 20px;
+   }
+   .listings img {
+      margin: 20px 20px 30px 0px;
+   }
+   .col-sm-5 {
+       -webkit-box-flex: 0;
+       -ms-flex: 0 0 33.333333%;
+       flex: 0 0 33.333333%;
+       max-width: 33.333333%;
+       min-width: 350px;
+   }
+   .card-rows {
+      padding: 0px 25px 0px 15px;
+   }
+   .navbar {
+     font-weight: 100;
+     color:#310e60;
+     background-color:#f9f9f9;
+   }
+   .col-md-11, .terms-link {
+      padding-left: 0px;
+   }
+   .col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 100%;
+}
 }

@@ -5,7 +5,9 @@
      <br/>
      <br/>
      <br/>
-     <h1 class="animated slideInDown"> Welcome back <%= current_user.full_name %> </h1>
+     <br/>
+     <h1 class="animated slideInDown"> Welcome <%= current_user.full_name %> </h1>
+     <p>Find dozens of internships tailored just for you.</p>
      <br/>
      <br/>
      <br/>
@@ -44,7 +46,7 @@
 
    <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
    <% i += 1 %>
-   <% break if i == 8 %>
+   <% break if i == 5 %>
 <% end %>
 </div>
 
@@ -52,8 +54,8 @@
    <h3>Want to see more internships? Sign up for free or upgrade to premium for a one time charge of $5.00. </h3>
    <br/>
    <br/>
-   <div class="container">
-  <div class="col-sm-4" id="free">
+   <div class="container card-rows">
+  <div class="col-sm-5" id="free">
     <div class="card">
       <div class="card-body">
          <strong><h4>Free</h4></strong>
@@ -62,7 +64,7 @@
          <br/>
          <ul>
            <li class="premium-benefits"> Create account </li>
-           <li class="premium-benefits"> View top 10 internships </li>
+           <li class="premium-benefits"> View top 15 internships </li>
            <li class="free-benefits"> Customize profile </li>
            <li class="free-benefits"> View internships based on your skills </li>
            <li class="free-benefits"> View internships based on your preferred location </li>
@@ -73,7 +75,8 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <br/>
+  <div class="col-sm-5">
     <div class="card">
       <div class="card-body">
         <strong><h4>Premium</h4></strong>
@@ -82,7 +85,7 @@
         <br/>
         <ul>
           <li class="premium-benefits"> Create account </li>
-          <li class="premium-benefits"> View top 10 internships </li>
+          <li class="premium-benefits"> View top 15 internships </li>
           <li class="premium-benefits"> Customize profile </li>
           <li class="premium-benefits"> View internships based on your skills </li>
           <li class="premium-benefits"> View internships based on your preferred location </li>

@@ -1,4 +1,4 @@
-# Software Engineering Final Project
+# Sweships - Software Engineering Project
 
 Live application: https://sweships.herokuapp.com/
 

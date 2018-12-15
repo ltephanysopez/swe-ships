@@ -89,3 +89,12 @@ def pro_only!
  	  redirect "/"
    end
  end
+
+ get "/delete_listing/:id" do
+	  administrator!
+	  post = Listing.get(params[:id])
+	  if post != nil
+	  post.destroy
+	  end
+		 redirect "/listings"
+ end

@@ -146,6 +146,13 @@ body {
    float:right;
 }
 
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    margin-right: 5px;
+}
+
 span a {
    text-decoration: none;
    color:white;
@@ -394,6 +401,12 @@ ul {
 .free-vs-premium h3 {
    text-align: center;
    font-weight: 200;
+   padding:0px 20px 0px 20px;
+}
+
+.admin-only h1 {
+   font-family: 'Nunito', sans-serif;
+   padding:100px 0px 0px 100px;
 }
 
 /* Media Queries */

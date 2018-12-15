@@ -14,10 +14,10 @@
 <p>Preferred location: <%= current_user.preferred_location %></p>
 <br/>
    <% if (current_user.administrator == true && current_user.pro == false) %>
-   <p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
+   <button type="button" class="btn btn-dark disabled">Edit Profile</button>
    <br/>
-   <div class="alert alert-warning">You currently do not have access to edit your
-      profile because you are an administrator. </div>
+   <br/>
+   <div class="alert alert-warning">You do not have access to edit your profile because you are an administrator.</div>
    <% elsif (current_user.pro == true) %>
       <p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
    <% else %>

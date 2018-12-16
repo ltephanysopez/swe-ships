@@ -33,7 +33,7 @@
       <h3><%= j.title %></h3>
       <a href="<%= j.l_url %>"  target="_blank"><button type="button" class="btn btn-primary">Apply</button></a>
       <% if current_user.administrator == true%>
-      &nbsp;<a href=<%="delete_listing/"+ (j.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
+      <a href=<%="delete_listing/"+ (j.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
       <% end %>
       <p><strong><%= j.company %> </strong><br/>
       <%= j.location %> <br/>

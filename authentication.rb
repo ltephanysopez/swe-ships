@@ -41,8 +41,8 @@ post "/register" do
 	email = params[:email]
 	password = params[:password]
 
-	#Check domain = "@utrgv.edu"
-	domain = "@utrgv.edu"
+	#Check domain = "@gmail.com"
+	domain = "@gmail.com"
 	e_length = email.length
 	e_domain = email[(e_length-10),10]
 

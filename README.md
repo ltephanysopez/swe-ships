@@ -24,12 +24,12 @@ The primary features of this application include the following:
 If you would like to modify the code on your local machine, feel free to clone this repository and run it by doing the following:
 
 ```
-git clone https://github.com/ltephanysopez/sweships.git
+git clone https://github.com/ltephanysopez/swe-ships.git
 ```
 
 Navigate to the directory.
 ```
-cd ~/Downloads/sweships
+cd ~/Downloads/swe-ships
 ```
 
 Install all necessary gems

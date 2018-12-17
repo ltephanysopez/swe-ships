@@ -55,7 +55,7 @@ post "/register" do
 		session[:user_id] = u.id
 		redirect "/"
 	else
-		erb :"authentication/invalid_sign_up"
+		erb :"authentication/invalid_signup"
 	end
 end
 

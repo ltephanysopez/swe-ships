@@ -1,10 +1,4 @@
 <div class="listings animated fadeIn">
-<<<<<<< HEAD
-   <br/>
-   <br/>
-   <br/>
-=======
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
    <br/>
    <br/>
    <h1>Internships</h1>
@@ -22,11 +16,7 @@
    <p>The following listings are the top ten internships in our database. <br/>
        To view dozens of internships matched specifically to your skills,
        upgrade for a one time charge of $5.00. <br/>
-<<<<<<< HEAD
-       <span class="badge badge-secondary"><a href="/user/upgrade">Upgrade</a></span>
-=======
        <span class="badge badge-secondary"><a href="/user/upgrade">UPGRADE</a></span>
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
    </p>
    <% end %>
    <!--****************************************************************-->
@@ -39,12 +29,9 @@
       <img src="<%= j.logo %>" width="90" height="90">
       <h3><%= j.title %></h3>
       <a href="<%= j.l_url %>"  target="_blank"><button type="button" class="btn btn-primary">Apply</button></a>
-      <% if current_user.administrator == true%>
-      <a href=<%="delete_listing/"+ (j.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
-      <% end %>
       <p><strong><%= j.company %> </strong><br/>
       <%= j.location %> <br/>
-       Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span> <br/>
+       Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/>
       <br/>
       <%= j.description %>
       <br/>
@@ -54,11 +41,7 @@
 
    <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
    <% i += 1 %>
-<<<<<<< HEAD
-   <% break if i == 15 unless (current_user.pro == true || current_user.administrator == true) %>
-=======
    <% break if i == 10 unless (current_user.pro ==true || current_user.administrator == true) %>
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
 <% end %>
    <br/>
    <br/>

@@ -39,11 +39,7 @@
   padding: 4px 4px 4px 4px;
   border-radius: 3px;
   color: white;
-<<<<<<< HEAD
-  background-color:#A78FE8;
-=======
   background-color:#FF9870;
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
 }
 .bootstrap-tagsinput .tag [data-role="remove"] {
   margin-left: 8px;

@@ -41,8 +41,8 @@ post "/register" do
 	email = params[:email]
 	password = params[:password]
 
-	#Check domain = "@gmail.com"
-	domain = "@gmail.com"
+	#Check domain = "@utrgv.edu"
+	domain = "@utrgv.edu"
 	e_length = email.length
 	e_domain = email[(e_length-10),10]
 
@@ -88,13 +88,4 @@ def pro_only!
 	if !current_user.pro
  	  redirect "/"
    end
- end
-
- get "/delete_listing/:id" do
-	  administrator!
-	  post = Listing.get(params[:id])
-	  if post != nil
-	  post.destroy
-	  end
-		 redirect "/listings"
  end

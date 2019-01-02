@@ -3,8 +3,6 @@ require_relative "authentication.rb"
 require_relative "user.rb"
 require_relative "listing.rb"
 
-enable :sessions
-
 #the following urls are included in authentication.rb
 # GET /login
 # GET /logout
@@ -15,7 +13,6 @@ enable :sessions
 # if they are not signed in, current_user will be nil
 
 get "/" do
-	@lastings = Listing.all
 	erb :index
 end
 

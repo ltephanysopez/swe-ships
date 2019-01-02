@@ -79,8 +79,6 @@ To build the application, we used:
 - DataMapper
 - Google Fonts
 
-
-
 Additionally, Slack, Git, and Github were used to discuss the project timeline and progress.
 ## Authors
 - [Stephany Lopez](https://www.ltephanysopez.com)
@@ -90,4 +88,3 @@ Additionally, Slack, Git, and Github were used to discuss the project timeline a
 ## Acknowledgement
 
 A special thank you to Eric Martinez, who assisted us throughout the project.
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e

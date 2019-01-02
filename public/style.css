@@ -1,0 +1,473 @@
+a {
+   color:white;
+}
+
+
+/* PAGE LOADER */
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.loader div{
+	height: 20px;
+	width: 20px;
+	margin-left: 20px;
+	border-radius: 50%;
+	background: #ffc6af;
+	position: relative;
+	float: left;
+	animation: move 1s linear infinite;
+}
+
+@keyframes move{
+	0%,60%,100%{
+		top: 0;
+	}
+	30%{
+		top: -30px;
+	}
+}
+
+.loader div:nth-child(1){
+	animation-delay: 0s;
+}
+.loader div:nth-child(2){
+	animation-delay: 0.2s;
+}
+.loader div:nth-child(3){
+	animation-delay: 0.4s;
+}
+
+.loader.complete {
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+}
+
+.navbar {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  color:white;
+  background: #355C7D;
+}
+
+.navbar .navbar-brand {
+  color: white;
+  font-weight:100;
+  font-size:25px;
+  font-family:'Abril Fatface';
+}
+
+.navbar .navbar-text a {
+  color: #FF9870;
+}
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+  color: #FF9870;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  border-radius: .25rem;
+  margin: 0 0.25em;
+}
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+  color: #FF9870;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+  color: #FF9870;
+  background: #355C7D;
+}
+
+
+/*.fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+*/
+
+
+.jumbotron {
+   background: #355C7D;
+   /*background-image: url("https://images.unsplash.com/photo-1533824266196-a1ef6282b836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb");
+   background-size: cover;
+   background-position: top;*/
+   color:white;
+   font-family: 'Nunito', sans-serif;
+}
+
+/* INDEX PAGE */
+.btn-lg {
+   padding:10px 45px 13px 45px;
+   border-radius: 25px;
+}
+
+.listings {
+   margin: 100px 100px 50px 150px;
+   font-family: 'Nunito', sans-serif;
+}
+
+
+/* COMPANY LOGO */
+.listings img {
+   float:left;
+   margin:10px 20px 10px 10px;
+}
+
+/* JOB APPLY BUTTON */
+.listings button {
+   float:right;
+}
+
+/* JOB TITLE */
+.listings h3 {
+   color:#FF9870;
+}
+
+span a {
+   text-decoration: none;
+   color:white;
+   font-size: 1.25em;
+}
+span a:hover {
+   color:white;
+   text-decoration: none;
+}
+
+/* UPLOAD A NEW INTERNSHIP PAGE */
+.upload-listing {
+   margin:100px 100px 50px 100px;
+   font-family: 'Nunito', sans-serif;
+}
+
+/* UPGRADE PAGE */
+.upgrade-page {
+   margin:100px 100px 50px 100px;
+   font-family: 'Nunito', sans-serif;
+}
+
+.container {
+   font-family: 'Nunito', sans-serif;
+}
+
+/* FOOTER SECTION */
+
+.end {
+   padding:75px 100px 0px 100px;
+   background:#355C7D;
+   color: white;
+   font-family: 'Work Sans', sans-serif;
+}
+
+.footer-grid {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 125px;
+}
+
+.footer-one {
+   grid-column-start:1;
+   grid-column-end:2;
+   font-family: 'Abril Fatface', cursive;
+   font-size:30px;
+}
+
+.footer-two {
+   grid-column-start:2;
+   grid-column-end:5;
+   text-align: center;
+   color:white;
+}
+
+.footer-two a:hover{
+   color:#FF9870;
+   text-decoration: none;
+}
+
+.footer-three {
+   grid-column-start:5;
+   grid-column-end:6;
+   text-align: right;
+}
+
+
+/* HOME PAGE */
+.item1 {
+   grid-area: header;
+}
+
+.item1 h1 {
+   font-size: 2em;
+   padding-bottom: 5px;
+}
+
+#logged-in {
+   font-size: 0.6em;
+}
+
+.item2 {
+   grid-area: menu;
+   align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu';
+  grid-gap: 10px;
+  background:none;
+  padding: 10px;
+}
+.grid-container > div {
+   background-color: none;
+   padding:70px 40px 30px 70px;
+   font-size: 30px;
+}
+
+.how-it-works {
+  background-color: white;
+  margin: 100px 60px 100px 60px;
+  font-family: 'Nunito', sans-serif;
+  color:#355C7D;
+}
+
+.how-it-works h2 {
+ text-align: center;
+ padding: 0px 0px 0px 20px;
+}
+
+.current-about-p  {
+   font-size: 1.2em;
+   padding: 10px 20px 20px 20px;
+   color:black;
+}
+
+.about {
+   background-color: white;
+   margin: 100px 60px 100px 60px;
+   font-family: 'Nunito', sans-serif;
+   color:#355C7D;
+}
+
+
+#current-about {
+   font-size: 4em;
+   text-align: left;
+   font-family: 'Abril Fatface';
+   color: #FF9870;
+}
+
+/* Shrink */
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+/* TERMS OF USE PAGE */
+
+.legal {
+   font-family: 'Work Sans', sans-serif;
+   margin: 100px 200px 100px 200px;
+}
+
+.legal h1, h3, h4 {
+   font-weight:700;
+}
+
+
+/* ACCOUNT PROFILE PAGE */
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+/* SIGN-UP PAGE */
+.terms-link {
+   color:gray;
+}
+
+.terms-link a {
+   color:gray;
+}
+
+.terms-link a:hover {
+   color:black;
+   text-decoration: none;
+}
+
+/* MODAL BODY */
+.modal-header {
+   background-image:url("https://images.pexels.com/photos/1544880/pexels-photo-1544880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   background-position: center;
+   color:white;
+}
+
+.modal-content a {
+   color:#2d2d2d;
+}
+
+.modal-content a:hover {
+   color:#b691e0;
+   text-decoration: none;
+}
+
+.modal-title {
+   font-weight:200;
+   font-size: 2.5em;
+}
+
+.col-md-5 {
+   padding-left: 47px;
+   font-family: 'Lato', sans-serif;
+   font-weight: 700;
+}
+
+.col-md-11 {
+   padding-left: 30px;
+   font-family: 'Lato', sans-serif;
+   font-weight: 700;
+}
+
+.col-md-11 {
+   padding-left: 30px;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 700;
+}
+
+/* CARD */
+ul {
+  list-style: none;
+}
+
+.card-rows {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   padding:20px 0px 0px 170px;
+}
+
+.card-body {
+   font-family: 'Karla', sans-serif;
+}
+
+/* Black premium checkmark */
+.premium-benefits {
+  list-style-image:url("/images/checklist.png");
+}
+
+/* Grey free checkmark */
+.free-benefits {
+  list-style-image:url("/images/free_checklist.png");
+  color:grey;
+}
+
+/* Coral colored button */
+.btn-premium {
+   color: #ffffff;
+   background-color: #FF9870;
+   border-color: #FF9870;
+   font-family: 'Nunito';
+}
+
+.btn-premium:hover,
+.btn-premium:focus,
+.btn-premium:active,
+.btn-premium.active,
+.open .dropdown-toggle.btn-premium {
+   color: #ffffff;
+   background-color: #FFA37F;
+   border-color: #FF9870;
+}
+
+.card-btn {
+   align-items: center;
+   width:80%;
+   max-width: 300px;
+   padding:12px 0px 12px 0px;
+   border-radius: 25px;
+   margin:0px 20px 0px 20px;
+}
+
+/* White button with coral colored text and border */
+.btn-free {
+   color: #FF9870;
+   background-color: #FFFFFF;
+   border-color: #FF9870;
+   font-family: 'Nunito';
+}
+
+.btn-free:hover,
+.btn-free:focus,
+.btn-free:active,
+.btn-free.active,
+.open .dropdown-toggle.btn-free {
+   color: #FF9870;
+   background-color: #FFFFFF;
+   border-color: #FF9870;
+}
+
+.free-vs-premium h2 {
+   text-align: center;
+   font-family:'Nunito';
+}
+
+/* ALERTS */
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+   .col-sm-5 {
+       -webkit-box-flex: 0;
+       -ms-flex: 0 0 33.333333%;
+       flex: 0 0 33.333333%;
+       max-width: 33.333333%;
+       min-width: 350px;
+   }
+   .card-rows {
+      padding:0px 0px 0px 0px;
+   }
+}

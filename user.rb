@@ -1,9 +1,13 @@
 require 'data_mapper'
+<<<<<<< HEAD
 require_relative 'listing.rb'
+=======
+>>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
 require 'stripe'
+require_relative 'listing.rb'
 
-set :publishable_key, "pk_test_Y19q4uOMtZL9rfgh3uHTtEo5"
-set :secret_key, "sk_test_aTWBdKlOMVvvoJtaz7xjfFIg"
+set :publishable_key, ENV['PUBLISHABLE_KEY']
+set :secret_key, ENV['SECRET_KEY']
 
 Stripe.api_key = settings.secret_key
 

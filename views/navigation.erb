@@ -23,7 +23,7 @@
  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
    <a class="dropdown-item" href="/user/upgrade">Upgrade</a>
    <div class="dropdown-divider"></div>
-   <a class="dropdown-item" href="/profile">Account</a>
+   <a class="dropdown-item" href="/profile">Profile</a>
    <div class="dropdown-divider"></div>
    <a class="dropdown-item" href="/logout">Sign Out</a>
  </div>
@@ -32,6 +32,7 @@
       <li class="nav-item">
        <a class="nav-link" href="/listings">Internships</a>
       </li>
+<<<<<<< HEAD
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
         </li>
@@ -110,3 +111,85 @@
     </div>
   </div>
 </div>
+=======
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#signUpModal" href="#">Sign Up</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+</nav>
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">&nbsp;Sign Up</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+       <br/>
+       <form action="register" method="POST">
+           <div class="col-md-11">
+         <label for="full_name">Full name</label>
+         <input type="full_name" class="form-control" placeholder="Ada Lovelace" name ="full_name" required>
+        </div>
+        <br/>
+         <div class="col-md-11">
+           <label for="email">Email address </label>
+           <input type="email" class="form-control" placeholder="name@utrgv.edu" name ="email" required>
+         </div>
+         <br/>
+         <div class="col-md-11">
+           <label for="password">Password</label>
+           <input type="password" class="form-control" placeholder="Create a password" name="password" required>
+         </div>
+         <br/>
+       <p class="terms-link"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By signing up, you're agreeing to our <a href="/terms-of-use">Terms of Use.</a></p>
+       <br/>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-free">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">&nbsp;Login</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+       <form action="/process_login" method="POST">
+         <div class="col-md-11">
+           <label for="email">E-mail address</label>
+           <input type="email" class="form-control" placeholder="name@utrgv.edu" name ="email" required>
+          <br/>
+         </div>
+         <div class="col-md-11">
+           <label for="password">Password</label>
+           <input type="password" class="form-control" placeholder="Password" name="password" required>
+         </div>
+         <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-free">Submit</button>
+       </form>
+       <br/>
+    </div>
+  </div>
+</div>
+</div>
+>>>>>>> ff5af7471df31278d95e36495e16b0389f66508e

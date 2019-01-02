@@ -26,7 +26,11 @@ get '/listings' do
    authenticate!
    # If it is a FREE user, show only 10 internships
    if (current_user.pro == false && current_user.administrator == false)
+<<<<<<< HEAD
       @lastings = Listing.all(:id.gt => 0, :id.lt => 16)
+=======
+      @lastings = Listing.all(:id.gt => 0, :id.lt => 11)
+>>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
       erb :listings
     # If it is a PRO user, show internships that have one matched skill or more
    elsif (current_user.pro == true)
@@ -47,7 +51,11 @@ get '/listings/preferred-location' do
     @lastings = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
     erb :listings
   else
+<<<<<<< HEAD
   return "You do not have any preferred locations!"
+=======
+     erb :no_preference
+>>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
 end
 end
 

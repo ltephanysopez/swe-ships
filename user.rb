@@ -1,8 +1,4 @@
 require 'data_mapper'
-<<<<<<< HEAD
-require_relative 'listing.rb'
-=======
->>>>>>> ff5af7471df31278d95e36495e16b0389f66508e
 require 'stripe'
 require_relative 'listing.rb'
 

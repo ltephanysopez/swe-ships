@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Internships
-=======
 # Swe-ships - Software Engineering Project
 
 Live application: https://sweships.herokuapp.com/

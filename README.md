@@ -80,6 +80,7 @@ Additionally, Slack, Git, and Github were used to discuss the project timeline a
 
 
 ## Authors
+Made with love by:
 - [Stephany Lopez](https://www.ltephanysopez.com)
 - [Cecy Sanchez](https://acsanchezr.github.io/)
 - Tarana Mou

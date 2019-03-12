@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>swe-ships</title>
+	<title>sweships</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:100,300|Abril+Fatface|Work+Sans:400,700|Karla" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/style.css">
-	<link rel="stylesheet" type="text/css" href="/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Lato:300|Karla|Oxygen:300,700|Work+Sans:900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/bootstrap-tagsinput.css">
-	<link rel="icon" href="/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/stylesz.css">
+	<link rel="stylesheet" type="text/css" href="/animate.css">
+	<link rel="icon" href="/images/favicon.ico" />
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
 		$(window).on('load',function(){
@@ -28,40 +29,24 @@
 	<%= erb :navigation %>
 
 	<main role="main">
-
 		<div class="loader">
 			<div></div>
 			<div></div>
 			<div></div>
 		</div>
 
-			<%= yield %>
+		<%= yield %>
 
-		</main>
-
-
+	</main>
     <footer class="end">
-		 <div class="footer-grid">
-      <div class="footer-one">
-      	<p>swe-ships<p>
-      </div>
-		<div class="footer-two">
-			<p>&copy; Copyright swe-ships 2018. All rights reserved.</p>
-			<p><a href="/terms-of-use">Terms of Use </a>• <a href="/privacy-policy">Privacy Policy</a> • <a href="#">General Inquiries</a> • <a href="#">Investors</a> </p>
-		</div>
-		<div class="footer-three">
-		<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width=40 height=40>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width=40 height=40>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="https://image.flaticon.com/icons/svg/185/185985.svg" width=40 height=40>
-		</div>
+			<p>&copy; Copyright sweships 2019. All rights reserved.</p>
+			<a href="https://github.com/ltephanysopez/swe-ships"><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"></a>
     </footer>
 
-
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="bootstrap-tagsinput.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</html>
+ 	<script type="text/javascript" src="bootstrap-tagsinput.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+ </body>
+ </html>

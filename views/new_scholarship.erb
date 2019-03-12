@@ -1,0 +1,64 @@
+<div class="listings">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Upload a Scholarship</h1>
+<span class="badge badge-info"><a href="/scholarships/new">Upload scholarship</a></span>
+<span class="badge badge-warning"><a href="/listings/new">Upload internship</a></span>
+<span class="badge badge-success"><a href="/conferences/new">Upload conference</a></span>
+<br/>
+<br/>
+<br/>
+<form action="/create/scholarship" method="POST">
+   <div class="row" id="aisle">
+         <div class="col-6">
+            <label for="scholarshipTitle">Scholarship Title</label>
+            <input type="text" class="form-control" placeholder="Ex: Future Engineer Scholarship" name="title" required>
+         </div>
+        <br/>
+        <div class="col-6">
+            <label for="scholarshipDescription">Scholarship Description</label>
+            <input type="text" class="form-control" placeholder="Ex: 2-3 sentences on scholarship requirements" name="description" required>
+        </div>
+        <br/>
+     </div>
+  <br/>
+    <div class="row" id="aisle">
+       <div class="col-6">
+           <label for="scholarshipOrganization">Company/Organization</label>
+           <input type="text" class="form-control" placeholder="Ex: Google" name="company" required>
+       </div>
+       <br/>
+            <div class="col-6">
+                <label for="scholarshipUrl">Scholarship Link</label>
+                <input type="text" class="form-control" placeholder="Enter link to job posting" name="s_url" required>
+            </div>
+            <br/>
+     </div>
+     <br/>
+   <div class="row" id="aisle">
+     <div class="col-6">
+          <label for="scholarshipLogo">Company Logo</label>
+          <input type="text" class="form-control" placeholder="Enter company logo" name="logo" required>
+     </div>
+     <div class="col-6">
+          <label for="scholarshipDeadline">Deadline</label>
+          <input type="text" class="form-control" placeholder="Enter scholarship deadline" name="deadline" required>
+     </div>
+   </div>
+     <br/>
+     <div class="row" id="aisle">
+       <div class="col-6">
+            <label for="scholarshipAmount">Scholarship Amount</label>
+            <input type="text" class="form-control" placeholder="Enter scholarship amount" name="amount" required>
+       </div>
+     </div>
+    <br/>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<br/>
+<br/>

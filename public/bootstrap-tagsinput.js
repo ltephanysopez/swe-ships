@@ -661,6 +661,7 @@
 
       return found;
   }
+
   /**
    * Initialize tagsinput behaviour on inputs and selects which have
    * data-role=tagsinput

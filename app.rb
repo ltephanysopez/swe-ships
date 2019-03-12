@@ -2,6 +2,9 @@ require "sinatra"
 require_relative "authentication.rb"
 require_relative "user.rb"
 require_relative "listing.rb"
+require_relative "scholarships.rb"
+require_relative "conferences.rb"
+enable :sessions
 
 #the following urls are included in authentication.rb
 # GET /login
@@ -13,6 +16,7 @@ require_relative "listing.rb"
 # if they are not signed in, current_user will be nil
 
 get "/" do
+	@lastings = Listing.all
 	erb :index
 end
 
@@ -23,3 +27,4 @@ end
 get "/privacy-policy" do
 	erb :privacy
 end
+

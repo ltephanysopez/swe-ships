@@ -1,8 +1,15 @@
-<div class="upload-listing">
+<div class="listings">
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
 <h1>Upload an Internship</h1>
+<span class="badge badge-info"><a href="/scholarships/new">Upload scholarship</a></span>
+<span class="badge badge-warning"><a href="/listings/new">Upload internship</a></span>
+<span class="badge badge-success"><a href="/conferences/new">Upload conference</a></span>
+<br/>
 <br/>
 <br/>
 <form action="/create" method="POST">
@@ -47,8 +54,12 @@
      <br/>
       <div class="row" id="aisle">
      <div class="col-6">
-          <label for="listingLogo">Company Logo </label>
+          <label for="listingLogo">Company Logo</label>
           <input type="text" class="form-control" placeholder="Enter company logo" name="logo" required>
+     </div>
+     <div class="col-6">
+          <label for="listingTerm">Internship Term (Ex: Spring, Summer, Fall)</label>
+          <input type="text" class="form-control" placeholder="Enter internship term" name="term" required>
      </div>
      </div>
      <br/>
@@ -56,4 +67,5 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+<br/>
 <br/>

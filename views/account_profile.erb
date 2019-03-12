@@ -1,4 +1,7 @@
-<div class="upload-listing animated fadeIn">
+<div class="listings animated fadeIn">
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -7,19 +10,19 @@
 <br/>
 <p>Email: <%= current_user.email %> </p>
 <br/>
-<p>Full name: <%= current_user.full_name %></p>
+<p>Name: <%= current_user.full_name %></p>
 <br/>
 <p>Skills:  <%= current_user.skills %></p>
 <br/>
 <p>Preferred location: <%= current_user.preferred_location %></p>
 <br/>
    <% if (current_user.administrator == true && current_user.pro == false) %>
-   <p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
+   <button type="button" class="btn btn-dark disabled">Edit Profile</button>
    <br/>
-   <div class="alert alert-warning">You currently do not have access to edit your
-      profile because you are an administrator. </div>
+   <br/>
+   <div class="alert alert-warning">You do not have access to edit your profile because you are an administrator. Modify users <a href="/admin/users" class="alert-link">here.</a></div>
    <% elsif (current_user.pro == true) %>
-      <p><a class="btn btn-dark hvr-fade" href="/account/edit_profile" role="button">Edit Profile</a></p>
+      <p><a class="btn btn-dark" href="/account/edit_profile" role="button">Edit Profile</a></p>
    <% else %>
       <p><a class="btn btn-dark hvr-fade disabled" href="/account/edit_profile" role="button">Edit Profile</a></p>
       <br/>

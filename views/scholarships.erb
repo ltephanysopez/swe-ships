@@ -1,0 +1,30 @@
+<div class="listings animated fadeIn">
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <h1>Scholarships</h1>
+   <br/>
+   <br/>
+   <% @scholarship.each do |z| %>
+      <img src="<%= z.logo %>" width="100" height="100">
+      <h3><%= z.title %></h3>
+      <a href="<%= z.s_url %>"  target="_blank"><button type="button" class="btn btn-primary">Learn More</button></a>
+      <% if current_user.administrator == true%>
+      <a href=<%="delete_scholarship/"+ (z.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
+      <% end %>
+      <p><strong><%= z.company %> </strong><br/>
+      Scholarship amount: <span class="badge badge-pill badge-info"><%= z.amount %></span> <br/>
+      Deadline: <%= z.deadline %><br/> <br/> <br/>
+      <%= z.description %>
+      <br/>
+      <br/>
+      <hr>
+      <br/>
+<% end %>
+   <br/>
+   <br/>
+   <br/>
+</div>

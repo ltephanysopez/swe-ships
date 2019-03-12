@@ -1,15 +1,12 @@
-# Swe-ships - Software Engineering Project
+# Sweships
 
-Live application: https://sweships.herokuapp.com/
+![Application Overview](https://github.com/ltephanysopez/sweships/blob/master/docs/home-page.png)
 
 
 ## About
 
-A problem many Computer Science and Computer Engineering students encounter is the difficulty in finding internship opportunities that fit their skills; many of us do not know where to search for them, or do not know if we are suitable for the position.
+Sweships is a web application designed for CS/CE students pursuing job opportunities in Software Engineering. The application works with an algorithm that matches internship postings with a student based on their skills and qualifications. Our service allows users to create a profile, customize their account with skills and programming languages they're most experienced with, and view internships in our database that are most relevant to their profile. Additionally, we've added a collection of resources that we think will be helpful to students interested in networking, expanding their skillset, or scholarships.
 
-To solve this problem, we created a web application that targets CSCI/CMPE students at UTRGV pursuing job opportunities in Software Engineering. The application works with an algorithm that matches internship postings with a student based on a their skills and qualifications. Our system allows for students to create an account, input their skills and qualifications, as well as their desired location to work in. Based on these inputs, the application returns listings that match from our database.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Page Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/sweships.gif)
 
 ## Features
 The primary features of this application include the following:
@@ -17,7 +14,6 @@ The primary features of this application include the following:
 - Matching internships with premium users based on their skills
 - Sorting internships based on user's preferred location
 - Payment processing with Stripe
-
 
 
 ## Installation and Setup
@@ -44,26 +40,26 @@ bundle exec ruby app.rb
 
 By default the server runs on port 4567, so to view the application on your local machine, head to http://localhost:4567/
 
-## Project Management
 
-### Wireframing
 
-![Index Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/index.png)
+## Wireframing
+Below are the original sketches for the web application.
 
-![Listings Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/listings.png)
+![Index Overview](https://github.com/ltephanysopez/sweships/blob/master/docs/index.png)
+
+![Listings Overview](https://github.com/ltephanysopez/sweships/blob/master/docs/listings.png)
+
+
 
 ### Databases
 The application makes use of a two databases, described as follows:
 - User database: Stores the data of free and signed up users. Free users may have empty fields such as “skills” and “preferred location” since they are not needed in their case. Premium users, on the other hand, should fill have fields complete in order to see internship listings.
 - Listings database: Stores the data of every internship listing an administrator adds.
+- Scholarships database: Stores the data of every scholarships listing an administrator adds.
+- Conferences database: Stores the data of every conference listing an administrator adds.
 
 The local databases were implemented and tested using SQLite3 accessed via DataMapper. When deploying our application with Heroku, the database migrated to PostgreSQL.
 
-![Database Overview](https://github.com/ltephanysopez/se-final-project/blob/master/docs/databases.png)
-
-
-### User Flow and Interaction
-![User Interaction Diagram Overview](https://github.com/ltephanysopez/se-final-project/blob/master/public/images/sweships_report.png)
 
 ## Tech Stack
 To build the application, we used:
@@ -79,11 +75,15 @@ To build the application, we used:
 - DataMapper
 - Google Fonts
 
+
 Additionally, Slack, Git, and Github were used to discuss the project timeline and progress.
+
+
 ## Authors
 - [Stephany Lopez](https://www.ltephanysopez.com)
 - [Cecy Sanchez](https://acsanchezr.github.io/)
 - Tarana Mou
+
 
 ## Acknowledgement
 

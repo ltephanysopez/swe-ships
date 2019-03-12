@@ -1,114 +1,109 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-  <a class="navbar-brand" href="/">&nbsp;&nbsp;swe-ships</a>
+<nav class="navbar navbar-expand-md navbar-light stroke fixed-top">
+  <a class="navbar-brand" href="/">&nbsp;&nbsp;SWESHIPS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav ml-auto">
-       <li class="nav-item">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-
       <% if current_user %>
         <li class="nav-item">
           <a class="nav-link" href="/listings">Internships</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/listings/new">Upload </a>
+         <a class="nav-link" href="/scholarships">Scholarships</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="/conferences">Conferences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Upload</a>
         </li>
         <li class="nav-item dropdown">
  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Account</a>
  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-   <a class="dropdown-item" href="/user/upgrade">Upgrade</a>
-   <div class="dropdown-divider"></div>
-   <a class="dropdown-item" href="/profile">Profile</a>
+   <a class="dropdown-item" href="/profile">Account</a>
    <div class="dropdown-divider"></div>
    <a class="dropdown-item" href="/logout">Sign Out</a>
  </div>
 </li>
       <% else %>
-      <li class="nav-item">
-       <a class="nav-link" href="/listings">Internships</a>
-      </li>
-      &nbsp;
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
-      </li>
-      &nbsp;
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#signUpModal" href="#">Sign Up</a>
-      </li>
-    <% end %>
-  </ul>
-</div>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#signUpModal" href="#">Sign Up</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </nav>
 
 <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title" id="exampleModalLabel">&nbsp;Sign Up</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-       <br/>
-       <form action="register" method="POST">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">&nbsp;Sign Up</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <br/>
+         <form id="signUpForm" action="register" method="POST">
            <div class="col-md-11">
-         <label for="full_name">Full name</label>
-         <input type="full_name" class="form-control" placeholder="Ada Lovelace" name ="full_name" required>
-        </div>
-        <br/>
-         <div class="col-md-11">
-           <label for="email">Email address </label>
-           <input type="email" class="form-control" placeholder="name@utrgv.edu" name ="email" required>
-         </div>
+             <label for="full_name">What do we call you?</label>
+             <input type="full_name" class="form-control" placeholder="Grace" name ="full_name" required>
+             </div>
+          <br/>
+           <div class="col-md-11">
+             <label for="email">Email address</label>
+             <input type="email" class="form-control" placeholder="name@gmail.com" name ="email" required>
+           </div>
+           <br/>
+           <div class="col-md-11">
+             <label for="password">Password</label>
+             <input type="password" class="form-control" placeholder="Create a password" name="password" required>
+           </div>
+           <br/>
+         <p class="terms-link">By signing up, you're agreeing to our <a href="#">Terms of Use.</a></p>
          <br/>
-         <div class="col-md-11">
-           <label for="password">Password</label>
-           <input type="password" class="form-control" placeholder="Create a password" name="password" required>
-         </div>
-         <br/>
-       <p class="terms-link"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By signing up, you're agreeing to our <a href="/terms-of-use">Terms of Use.</a></p>
-       <br/>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-      <button type="submit" class="btn btn-free">Register</button>
-      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-premium">Register</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title" id="exampleModalLabel">&nbsp;Login</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-       <form action="/process_login" method="POST">
-         <div class="col-md-11">
-           <label for="email">E-mail address</label>
-           <input type="email" class="form-control" placeholder="name@utrgv.edu" name ="email" required>
-          <br/>
-         </div>
-         <div class="col-md-11">
-           <label for="password">Password</label>
-           <input type="password" class="form-control" placeholder="Password" name="password" required>
-         </div>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Login</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form id="loginForm" action="/process_login" method="POST">
+           <div class="col-md-11">
+             <label for="email">E-mail address</label>
+             <input type="email" class="form-control" placeholder="user@gmail.com" name ="email" required>
+            <br/>
+           </div>
+           <div class="col-md-11">
+             <label for="password">Password</label>
+             <input type="password" class="form-control" placeholder="Password" name="password" required>
+           </div>
+           <br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-premium">Submit</button>
+         </form>
          <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-free">Submit</button>
-       </form>
-       <br/>
+      </div>
     </div>
   </div>
-</div>
 </div>

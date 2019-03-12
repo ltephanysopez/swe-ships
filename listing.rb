@@ -18,6 +18,7 @@ class Listing
     property :location, Text
     property :company, Text
     property :count, Integer
+    property :term, Text, :default => "Summer"
 
 end
 
@@ -26,7 +27,7 @@ get '/listings' do
    authenticate!
    # If it is a FREE user, show only 10 internships
    if (current_user.pro == false && current_user.administrator == false)
-      @lastings = Listing.all(:id.gt => 0, :id.lt => 11)
+      @lastings = Listing.all(:id.gt => 0, :id.lt => 45)
       erb :listings
     # If it is a PRO user, show internships that have one matched skill or more
    elsif (current_user.pro == true)
@@ -47,7 +48,7 @@ get '/listings/preferred-location' do
     @lastings = Listing.all(:count.gt => 1,:location => current_user.preferred_location)
     erb :listings
   else
-     erb :no_preference
+  return "You do not have any preferred locations!"
 end
 end
 
@@ -61,7 +62,7 @@ end
 
 # POST request that adds a new listing to the database
 post '/create' do
-   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["skills"] && params["company"] && params["location"] != nil
+   if params["title"] && params["description"] && params["logo"] && params["l_url"] && params["skills"] && params["company"] && params["location"] && params["term"] != nil
       j = Listing.new
       j.title = params["title"]
       j.description = params["description"]
@@ -70,6 +71,7 @@ post '/create' do
       j.skills = params["skills"]
       j.company = params["company"]
       j.location = params["location"]
+      j.term = params["term"]
       j.save
       return erb :new_listing
    else

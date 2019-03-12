@@ -1,0 +1,33 @@
+<div class="listings animated fadeIn">
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <h1>Tech Conferences</h1>
+   <p>Scholarships to attend tech conferences</p>
+   <br/>
+   <br/>
+   <% @conference.each do |c| %>
+      <img src="<%= c.logo %>" width="110" height="110">
+      <h3><%= c.title %></h3>
+      <a href="<%= c.c_url %>"  target="_blank"><button type="button" class="btn btn-primary">Learn More</button></a>
+      <% if current_user.administrator == true%>
+      <a href=<%="delete_conference/"+ (c.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
+      <% end %>
+      <p><strong><%= c.company %> </strong><br/>
+      <%= c.location %><br/>
+      Conference Date: <%= c.c_date %><br/>
+      Deadline: <%= c.deadline %><br/> <br/>
+      <%= c.description %> <br/> <br/>
+      Scholarship includes: <span class="badge badge-light"><%= c.aid %></span>
+      <br/>
+      <br/>
+      <hr>
+      <br/>
+<% end %>
+   <br/>
+   <br/>
+   <br/>
+</div>

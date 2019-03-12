@@ -1,152 +1,90 @@
 <div class="jumbotron">
-  <div class="grid-container">
+   <br/>
+   <br/>
+   <br/>
      <% if current_user %>
-      <div class="item1">
-         <br/>
-         <h1 class="animated slideInDown"> Welcome <%= current_user.full_name %></h1>
-         <p id="logged-in">Find dozens of internships tailored just for you by editing your profile.</p>
-         <br/>
-      </div>
-      <div class="item2">
-        <video width="580" height="320" controls>
-         <source src="/images/index_video.mp4" type="video/mp4">
-        </video>
-      </div>
-   </div>
-</div>
-<div class="about">
-   <br/>
-  <h2 id="current-about">About</h2>
-  <br/>
-  <p class="current-about-p"> A problem many Computer Science and Computer Engineering students encounter is the difficulty while
-     searching for internship opportunities that fit their skillset; many of us do not know where to
-     search for listings, or do not know if we are suitable for the position.
      <br/>
-     To solve this problem, we've created Sweships- a job searching service that gives you access to dozens
-     of internship listings targeted towards Computer Science and Computer Engineering students at UTRGV.
-     Our service allows users to create a profile, customize their account with skills and programming
-     languages they're most experienced with, and view internships from 200+ listings in our database
-     that are most relevant for you.
+     <h1 class="animated slideInDown"> Hi <%= current_user.full_name %> </h1>
+     <p>Find dozens of internships tailored just for you.</p>
      <br/>
-  </p>
-  <br/>
-  <br/>
-  <hr>
-</div>
-<div class="free-vs-premium">
-   <h2>View internships free or upgrade to Premium.</h2>
-   <br/>
-   <br/>
-   <div class="container card-rows">
-  <div class="col-sm-5">
-    <div class="card">
-      <div class="card-body">
-         <strong><h4>Free</h4></strong>
-         <h4>$0.00</h4>
-         <hr>
-         <br/>
-         <ul>
-           <li class="premium-benefits"> Create account </li>
-           <li class="free-benefits"> Customize profile </li>
-           <li class="free-benefits"> View top 10 internships </li>
-           <li class="free-benefits"> View internships based on your skills </li>
-           <li class="free-benefits"> View internships based on your preferred location </li>
-          </ul>
-          <br/>
-          <hr>
-        <a href="/listings" class="btn btn-free card-btn hvr-fade"><strong>FREE</strong></a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-5">
-    <div class="card">
-      <div class="card-body">
-        <strong><h4>Premium</h4></strong>
-        <h4>$5.00</h4>
-        <hr>
-        <br/>
-        <ul>
-          <li class="premium-benefits"> Create account </li>
-          <li class="premium-benefits"> Customize profile </li>
-          <li class="premium-benefits"> View top 10 internships </li>
-          <li class="premium-benefits"> View internships based on your skills </li>
-          <li class="premium-benefits"> View internships based on your preferred location </li>
-         </ul>
-         <br/>
-         <hr>
-        <a href="/user/upgrade" class="btn btn-premium card-btn hvr-fade"><strong>UPGRADE</strong></a>
-      </div>
-    </div>
-  </div>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-</div>
+     <br/>
+        <div class="wave-signed-in" style="background-image:url(/images/wave.png); background-size: 50% 85px;"></div>
+     <br/>
+     <br/>
     <% else %>
-    <div class="item1">
       <br/>
-      <p class="animated slideInDown">
-         We connect software engineering <br/>
-         students with internships <br/>
-         relevant to their skills.
-      </p>
-     <button type="button" class="btn btn-light btn-lg animated slideInDown" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-    </div>
-    <div class="item2">
-      <video width="580" height="320" controls>
-     <source src="/images/index_video.mp4" type="video/mp4">
-      </video>
-    </div>
-    </div>
-   </div>
-   <div class="about">
-      <br/>
-     <h2 id="current-about">About</h2>
-     <br/>
-     <p class="current-about-p"> A problem many Computer Science and Computer Engineering students encounter is the difficulty while
-        searching for internship opportunities that fit their skillset; many of us do not know where to
-        search for listings, or do not know if we are suitable for the position.
-        <br/>
-        To solve this problem, we've created Sweships- a job searching service that gives you access to dozens
-        of internship listings targeted towards Computer Science and Computer Engineering students at UTRGV.
-        Our service allows users to create a profile, customize their account with skills and programming
-        languages they're most experienced with, and view internships from 200+ listings in our database
-        that are most relevant for you.
-        <br/>
-     </p>
-     <br/>
-     <br/>
-     <hr>
-   </div>
-    <div class="how-it-works">
-      <h2>HOW DOES IT WORK?</h2>
-      <h5 align="center">Still got questions? don't worry!
-      the website's functionalities are described in detail below:</h5>
-      <br/>
-      <h4>FREE USERS</h4>
-      <p> To view the top listings in your database, you'll need to create an account with your <b>UTRGV</b>
-         email. After successfully signing up, you will be able to see our ten great opportunities currently
-         open under <b>"Internships"</b>, and have the chance to upgrade to Premium.
-      <br/>
-      <h4>PREMIUM USERS</h4>
-      For a better experience, free users can <b>upgrade</b> to become a Premium user by paying a one-time fee of 5 USD.
-      Premium users can create a personal profile and:
-      <br/>
-      <ul>
-        <li>Input their name</li>
-        <li>Add their skills and qualifications (e.g. C++, HTML, Ruby)</li>
-        <li>Specify their desired location to intern in (state)</li>
-      </ul>
-      <p>You can always come back and edit your profile if you need to make any changes. <br/>
-        As a Premium user, you'll be matched with internship opportunities where only internships that require
-        your skills and abilities, as well as your preferred location, will be displayed. <br/>
-        From there, you can just click on <b>Apply</b> and automatically be taken directly to the application.
+      <h1><strong>SWESHIPS</strong></h1>
+      <p>Designed to help software engineering students<br/>
+          find their next greatest opportunity.<br/>
       </p>
       <br/>
       <br/>
-      <p align="center"><img src="./images/sweships_report.png"></p>
+      <br/>
+         <div class="wave" style="background-image:url(/images/wave.png); background-size: 50% 85px;"></div>
     </div>
    <% end %>
+  </div>
+</div>
+<div class="about">
+   <div class="about-one">
+      <img src="/images/code.png" alt="symbol">
+   </div>
+   <div class="about-two">
+      <h2>Finding an internship is hard, but it doesn't have to be. </h2>
+      <p>
+         Many Computer Science and Computer Engineering students reach difficulty in finding internship
+         opportunities that fit their skills; many of us don't know how to search for them, don't know if we are suitable for the position,
+         or spend an insurmountable time searching through listings that aren't relevant to
+         our skillset.
+         <br/>
+         <br/>
+         To solve this problem, we've created Sweships, a web application designed for CS/CE students
+         pursuing job opportunities in Software Engineering. Sweships works
+         with an algorithm that matches internship postings with a student based on their
+         skills and qualifications. Our service allows users to create a profile, customize
+         their account with skills and programming languages they're most experienced with,
+         and view internships from 300+ listings in our database that are most relevant to
+         their skillset.
+         <br/>
+         <br/>
+         Not looking for an internship? We've added a collection of additional resources including tuition scholarships,
+         diversity conference scholarships, and other events that will be helpful to students interested in networking or expanding their skillset.
+         Have more questions? Check out our FAQ page or <a href="mailto:sweships@gmail.com?Subject=Hello%20again" target="_top">say hello</a> and we'll get back to you as soon as possible.
+      </p>
+   </div>
+</div>
+
+<div class="listings">
+   <hr>
+   <br/>
+   <br/>
+   <br/>
+   <h2>Latest job postings</h2>
+   <br/>
+   <br/>
+   <% i = 0 %>  <!-- variable for looping through internships 10 times (FREE USERS) -->
+
+   <% @lastings.each do |j| %>
+      <img src="<%= j.logo %>" width="110" height="110">
+      <h3><%= j.title %></h3>
+      <a href="<%= j.l_url %>"  target="_blank"><button type="button" class="btn btn-primary">Apply</button></a>
+      <h5><strong><%= j.company %> </strong><br/>
+      <%= j.location %> <br/>
+      </h5>
+      <p>
+      Internship term: <span class="badge badge-pill badge-secondary"><%= j.term %></span> <br/>
+      Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/> <br/>
+      <%= j.description %>
+      <br/>
+      <br/>
+      <br/>
+      <hr>
+      <br/>
+   <!-- increment until 5 for index page -->
+   <% i += 1 %>
+   <% break if i == 5 %>
+<% end %>
+</div>
+
+<br/>
+<br/>

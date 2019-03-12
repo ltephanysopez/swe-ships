@@ -1,0 +1,36 @@
+<!-- Admin page, ability to delte sellers. -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+   <h1>Users</h1>
+   <br/>
+   <br/>
+   <div class="card bg-light">
+      <div class="card-body">
+         <table class="table p-5">
+            <thead class="thead-light">
+               <tr>
+                  <th scope = "col" >User</th>
+                  <th scope = "col" >Email</th>
+                  <th scope = "col" >Premium</th>
+                  <th scope = "col" >Delete User</th>
+               </tr>
+            </thead>
+            <tbody>
+            <% User.each do |u| %>
+            <tr>
+               <td><%=u.id%></td>
+               <td><%=u.email%></td>
+               <td><%=u.pro%></td>
+               <td><a href=<%="delete_user/"+ (u.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a></td>
+            <%end%>
+            </tbody>
+         </table>
+      </div>
+   </div>
+   <br/>
+   <br/>
+   <br/>

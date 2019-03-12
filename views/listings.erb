@@ -1,47 +1,57 @@
 <div class="listings animated fadeIn">
    <br/>
    <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
    <h1>Internships</h1>
 
    <!-- Display different messages for pro and free users -->
    <% if (current_user.pro == true) %>
-   <p>The following internships are based on the skills on your profile: <span class="badge badge-light"><%= current_user.skills%></span></p>
-   <span class="badge badge-info"><a href="/account/edit_profile">Edit profile</a></span>
-   <span class="badge badge-warning"><a href="/listings/preferred-location">View by preferred location</a></span>
+   <p>The following internships are based on the skills on your profile: <span class="badge badge-light"><%= current_user.skills%></span> <br/>
+      Want to see more internships? Update your profile to include the languages and frameworks you're most proficient in.</p>
+   <span class="badge badge-warning"><a href="/account/edit_profile">Edit profile</a></span>
+   <span class="badge badge-info"><a href="/listings/preferred-location">View by preferred location</a></span>
    <span class="badge badge-success"><a href="/listings">View by skills</a></span>
+   <br/>
    <br/>
    <% elsif (current_user.administrator == true ) %>
    <p>The following internships are ALL internships stored in the database.</p>
    <% else %>
-   <p>The following listings are the top ten internships in our database. <br/>
+   <p>The following listings are the top thirty internships in our database. <br/>
        To view dozens of internships matched specifically to your skills,
-       upgrade for a one time charge of $5.00. <br/>
-       <span class="badge badge-secondary"><a href="/user/upgrade">UPGRADE</a></span>
+       upgrade for a one time charge of $3.00. <br/>
+       <span class="badge badge-info"><a href="/user/upgrade">Upgrade</a></span>
    </p>
    <% end %>
    <!--****************************************************************-->
    <br/>
    <br/>
 
-   <% i = 0 %>  <!-- variable for looping through internships 10 times (FREE USERS) -->
+   <% i = 0 %>  <!-- variable for looping through internships (FREE USERS) -->
 
    <% @lastings.each do |j| %>
-      <img src="<%= j.logo %>" width="90" height="90">
+      <img src="<%= j.logo %>" width="110" height="110">
       <h3><%= j.title %></h3>
       <a href="<%= j.l_url %>"  target="_blank"><button type="button" class="btn btn-primary">Apply</button></a>
-      <p><strong><%= j.company %> </strong><br/>
-      <%= j.location %> <br/>
-       Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/>
-      <br/>
-      <%= j.description %>
-      <br/>
-      <br/>
-      <hr>
-      <br/>
-
-   <!-- increment until 10 and BREAK if i == 10 (FREE USERS) -->
+      <% if current_user.administrator == true%>
+      <a href=<%="delete_listing/"+ (j.id).to_s %>><button type="button" class="btn btn-danger">Delete</button></a>
+      <% end %>
+      <h5><strong><%= j.company %> </strong><br/>
+         <%= j.location %> <br/>
+      </h5>
+      <p>
+         Internship term: <span class="badge badge-pill badge-secondary"><%= j.term %></span> <br/>
+         Requires expertise in one or more of the following: <span class="badge badge-light"><%= j.skills %></span>  <br/> <br/>
+         <%= j.description %>
+         <br/>
+         <br/>
+         <hr>
+         <br/>
+   <!-- increment until 30 and BREAK if i == 30 (FREE USERS) -->
    <% i += 1 %>
-   <% break if i == 10 unless (current_user.pro ==true || current_user.administrator == true) %>
+   <% break if i == 45 unless (current_user.pro == true || current_user.administrator == true) %>
 <% end %>
    <br/>
    <br/>

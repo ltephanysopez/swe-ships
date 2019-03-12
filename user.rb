@@ -1,9 +1,11 @@
 require 'data_mapper'
 require 'stripe'
 require_relative 'listing.rb'
+require_relative 'scholarships.rb'
+require_relative 'conferences.rb'
 
-set :publishable_key, ENV['PUBLISHABLE_KEY']
-set :secret_key, ENV['SECRET_KEY']
+set :publishable_key, "pk_live_LJk0EPfLp5wbvQvnOsA5uL95"
+set :secret_key, "sk_live_Ty6UNDMIWvJNKokjNOZAQre2"
 
 Stripe.api_key = settings.secret_key
 
@@ -22,7 +24,7 @@ class User
     property :skills, Text
     property :full_name, Text
     property :preferred_location, Text
-    property :pro, Boolean, :default => false
+    property :pro, Boolean, :default => true
     property :administrator, Boolean, :default => false
 
     def login(password)
@@ -35,6 +37,8 @@ DataMapper.finalize
 # automatically create the post table
 User.auto_upgrade!
 Listing.auto_upgrade!
+Scholarships.auto_upgrade!
+Conferences.auto_upgrade!
 
 #make an admin user if one doesn't exist!
 if User.all(administrator: true).count == 0
@@ -53,7 +57,7 @@ post "/charge" do
     cu.save
 
      # Amount in cents
-  @amount = 500
+  @amount = 300
 
   customer = Stripe::Customer.create(
     :email => 'customer@example.com',
@@ -69,6 +73,11 @@ post "/charge" do
   erb :account_profile
 end
 
+get '/admin/users' do
+   administrator!
+   @User = User.all
+   erb :users
+end
 
 get "/user/upgrade" do
     authenticate!

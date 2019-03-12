@@ -1,4 +1,7 @@
-<div class="upload-listing">
+<div class="listings">
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -10,7 +13,7 @@
    <p>Name: <%= current_user.full_name %></p>
    <div class="row" id="aisle">
         <div class="col-6">
-            <label for="listingDescription">Skills (Ex: Python, Java, Photoshop)</label>
+            <label for="listingDescription">Skills (ex: HTML, JavaScript, React, Adobe Suite, etc.)</label>
             <input type="text" data-role="tagsinput" class="form-control" name="skills" value="<%= current_user.skills%>" required>
         </div>
         <br/>
@@ -18,12 +21,13 @@
      <br/>
      <div class="row" id="aisle">
      <div class="col-6">
-         <label for="listingDescription">Preferred Location (if you have no preference, type "Multiple locations")</label>
+         <label for="listingDescription">Optional: Preferred Location (ex: NY)</label>
          <input type="text" class="form-control" value="<%= current_user.preferred_location%>" name="preferred_location">
     </div>
     </div>
     <br/>
-  <button type="submit" class="btn btn-premium">Submit</button>
+    <br/>
+  <button type="submit" class="btn btn-dark">Submit</button>
 </form>
 <br/>
 <br/>
